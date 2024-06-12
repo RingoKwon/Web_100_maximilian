@@ -1,0 +1,30 @@
+body {
+  margin: 50px;
+
+}
+#todays-challenge {
+  color: brown;
+  font-weight: bold;
+  font-size: 52px;
+}
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border:5px solid black;
+  margin-top: -134px;
+
+
+}
+span {
+    color: red;
+}
+#box1{
+    border: 5px solid black;
+    background-color: rgb(24, 12, 193);
+    padding-top: 20px;
+    border-radius: 20px;
+    margin: 200px auto 78px auto;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+
+}

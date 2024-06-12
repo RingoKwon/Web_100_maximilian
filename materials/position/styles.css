@@ -1,0 +1,45 @@
+html{
+  margin: 50px 0;
+  align-items: center;
+}
+div {
+    background-color: #c7c7c7;
+    padding: 20px;
+    text-align: center;
+
+  }
+  
+  p {
+    color: black;
+    padding: 50px;
+    margin: 0;
+  }
+  
+  #container {
+    background-color: #521751;
+
+  }
+  
+  #container p {
+    color: white;
+  }
+  
+  #one {
+    background-color: #943092;
+  }
+  
+  #two {
+    background-color: #c95bc7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    width: 100% ;
+    box-sizing: border-box;
+    border: 10px;
+
+  }
+  
+  #three {
+    background-color: #dd61db;
+  }

@@ -1,0 +1,21 @@
+
+body {
+    text-align: center;
+    background-color: antiquewhite;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: gray;
+}
+p {
+    font-family: 'Fira Sans', sans-serif;
+    color: darkgray;
+}
+a { 
+    color: brown;
+    text-decoration: none;
+}
+ a:hover{
+    text-decoration: underline;
+    color: rebeccapurple;
+}

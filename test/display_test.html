@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property Example</title>
+    <style>
+      .block-link {
+        display: block;
+        background-color: lightblue;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+      .inline-block-link {
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        background-color: lightgreen;
+        text-align: center;
+        line-height: 50px; /* Vertically center text */
+        margin: 10px;
+      }
+      .hidden-link {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Default inline link: <a href="#">Click me</a></p>
+
+    <p>Block link:</p>
+    <a href="#" class="block-link">This is a block link</a>
+
+    <p>Inline-block links:</p>
+    <a href="#" class="inline-block-link">Inline-block 1</a>
+    <a href="#" class="inline-block-link">Inline-block 2</a>
+
+    <p>This is a visible text. The next link is hidden:</p>
+    <a href="#" class="hidden-link">You can't see me</a>
+  </body>
+</html>
