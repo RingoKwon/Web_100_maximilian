@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Froms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET" novalidate>
+        <section>
+            <h2>your personal details</h2>
+          <ul>
+            <li>
+              <label for="username">your name</label>
+              <input type="text" name="user-name" id="username" />
+            </li>
+            <li>
+              <label for="useremail">Your email.</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">pw</label>
+              <input type="password" id="userpassword" name="user-password" />
+            </li>
+          </ul>
+        </section>
+        <section>
+            <h2>More Details</h2>
+          <ul>
+            <li>
+              <label for="userage">age</label>
+              <input type="number" step="1" name="user-age" id="userage" />
+            </li>
+            <li>
+              <input type="date" />
+            </li>
+            <li>
+              <label for="favorite-color">your favorite color?</label>
+              <select name="favorite-color" id="favorite-color">
+                <option value="blue">Blue</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="usermessage">your message</label>
+          <textarea name="user-message" id="usermessage"></textarea>
+        </section>
+        <section>
+          <h2>how verify account</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="verify-phone" value="ph" />
+              <label for="verify-phone">ph</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="verify-text" value="text" />
+              <label for="verify-text">tx</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+              />
+              <label for="verify-email">e</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+            <h2>contact details</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                name="contact"
+                id="contect-email"
+                value="email"
+              />
+              <label for="contect-email">contact email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                name="contact"
+                id="contact-phone"
+                value="phone"
+              />
+              <label for="contact-phone">contact phone</label>
+            </li>
+          </ul>
+        </section>
+        <hr>
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="agree-terms" />
+            <label for="agree-terms">agree terms</label>
+          </div>
+        </section>
+        <section>
+            <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
