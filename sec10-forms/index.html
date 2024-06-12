@@ -17,30 +17,44 @@
       <h1>Demo Form</h1>
     </header>
     <main>
-      <form action="/" method="GET" novalidate>
+      <form action="/" method="GET">
         <section>
-            <h2>your personal details</h2>
+          <h2>your personal details</h2>
           <ul>
             <li>
               <label for="username">your name</label>
-              <input type="text" name="user-name" id="username" />
+              <input type="text" name="user-name" id="username" required placeholder="ringo "/>
             </li>
             <li>
               <label for="useremail">Your email.</label>
-              <input type="email" name="user-email" id="useremail" />
+              <input type="email" name="user-email" id="useremail" required />
             </li>
             <li>
               <label for="userpassword">pw</label>
-              <input type="password" id="userpassword" name="user-password" />
+              <input
+                type="password"
+                id="userpassword"
+                name="user-password"
+                required
+                minlength="7"
+              />
             </li>
           </ul>
         </section>
         <section>
-            <h2>More Details</h2>
+          <h2>More Details</h2>
           <ul>
             <li>
               <label for="userage">age</label>
-              <input type="number" step="1" name="user-age" id="userage" />
+              <input
+                type="number"
+                step="1"
+                name="user-age"
+                id="userage"
+                required
+                min="18"
+                max="100"
+              />
             </li>
             <li>
               <input type="date" />
@@ -57,17 +71,29 @@
         </section>
         <section>
           <label for="usermessage">your message</label>
-          <textarea name="user-message" id="usermessage"></textarea>
+          <textarea name="user-message" id="usermessage" required rows="8"></textarea>
         </section>
         <section>
           <h2>how verify account</h2>
           <ul>
             <li class="form-control-inline">
-              <input type="radio" name="verify" id="verify-phone" value="ph" />
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="ph"
+                required
+              />
               <label for="verify-phone">ph</label>
             </li>
             <li class="form-control-inline">
-              <input type="radio" name="verify" id="verify-text" value="text" />
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text"
+                value="text"
+                required
+              />
               <label for="verify-text">tx</label>
             </li>
             <li class="form-control-inline">
@@ -76,13 +102,14 @@
                 name="verify"
                 id="verify-email"
                 value="email"
+                required
               />
               <label for="verify-email">e</label>
             </li>
           </ul>
         </section>
         <section>
-            <h2>contact details</h2>
+          <h2>contact details</h2>
           <ul>
             <li class="form-control-inline">
               <input
@@ -104,7 +131,7 @@
             </li>
           </ul>
         </section>
-        <hr>
+        <hr />
         <section>
           <div class="form-control-inline">
             <input type="checkbox" name="terms" id="agree-terms" />
@@ -112,7 +139,7 @@
           </div>
         </section>
         <section>
-            <button type="reset">Clear</button>
+          <button type="reset">Clear</button>
           <button type="submit">Submit</button>
         </section>
       </form>
