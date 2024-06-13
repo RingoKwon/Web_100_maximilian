@@ -1,40 +1,23 @@
-//
+let paragraphElement = document.querySelector("p");
 
-let anchorElement = document.getElementById("external-link");
-anchorElement.href = "https://google.com";
+function changeParagraphText(event) {
+    
+    paragraphElement.textContent = 'Clicked'
+    console.log('paragraph clicked here')
+    console.log(event)
+}
 
-anchorElement = document.querySelector("#external-link");
-anchorElement.href = "https://google.com";
+paragraphElement.addEventListener("click", changeParagraphText);
 
-// ADD NEW ELEMENT
-// 1. Create the new element
-let newAnchorElement = document.createElement('a');
-newAnchorElement.href = 'https://googl.com'; 
-newAnchorElement.textContent = 'This leads to Google!'; 
-// 2. Get access to the parent elent that should hold then new element
-let firstParagraph = document.querySelector('p');
+let inputElement = document.querySelector('input');
 
-// 3. Insert the new element into the parent element content
+function retriveUserInput(event){
+    // let entertText = inputElement.value;
+    // let entertText = event.target.value;
+    let entertText = event.data;
 
-firstParagraph.append(newAnchorElement);
+    console.log(entertText)
+    // console.log(event)
+}
 
-// REMOVE ELEMENTS
-// 1. Select the element that should be removes
-let firstH1Element = document.querySelector('h1')
-
-// 2. Remove it!
-firstH1Element.remove()
-// firstH1Element.parentElement.removeChild(firstH1Element);// arnernatives it also work on the old browser
-
-
-// MOVE ELEMENT
-firstParagraph.parentElement.append(firstParagraph);
-
-
-// innerHTML
-firstParagraph.innerHTML = 'hi <strong>all</strong>.'
-
-
-
-
-
+inputElement.addEventListener("input" ,retriveUserInput);
