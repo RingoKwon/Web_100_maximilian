@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Asvanced JacaScript</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <script src="demo.js" defer></script>
   </head>
   <body>
-    <form action="text">
-      <p>Product Name!</p>
-      <input type="text" id="myinput"/>
-      <span id="denom">a</span>
-      <span>/</span>
-      <span id="nom">60</span>
-      <button>submit</button>
+    <form>
+      <div class="control">
+        <label for="product-name">Product Name</label>
+        <input
+          type="text"
+          id="product-name"
+          name="product-name"
+          maxlength="60"
+        />
+        <span id="charcount"> <span id="remaining-chars">60</span>/60 </span>
+      </div>
+      <button>Submit</button>
     </form>
-    
   </body>
 </html>
