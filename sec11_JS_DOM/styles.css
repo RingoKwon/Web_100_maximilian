@@ -60,9 +60,9 @@ body {
   }
   
   input.warning {
-    background-color: rgb(248, 191, 145);
+    background-color: rgb(148, 191, 145);
   }
   
   #remaining-chars.warning {
-    color:rgb(211, 109, 26);
+    color:rgb(111, 109, 26);
   }
