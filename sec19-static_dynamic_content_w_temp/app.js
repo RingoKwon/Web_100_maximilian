@@ -13,36 +13,31 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", function (req, res) {
-  htmlFilePath = path.join(__dirname, "views", "index.html");
-  res.sendFile(htmlFilePath);
+res.render('index')
 });
 app.get("/recommend", function (req, res) {
-  htmlFilePath = path.join(__dirname, "views", "recommend.html");
-  res.sendFile(htmlFilePath);
+    res.render('recommend')
 });
 app.post("/recommend", function (req, res) {
-  const restaurant = req.body;
-  const filePath = path.join(__dirname, "data", "restaurant.json");
-
-  const fileData = fs.readFileSync(filePath);
-  const storeRestaurants = JSON.parse(fileData);
-
-  storeRestaurants.push(restaurant);
-
-  fs.writeFileSync(filePath, JSON.stringify(storeRestaurants));
-
-  res.redirect("/confirm");
-});
+    const restaurant = req.body;
+    const filePath = path.join(__dirname, "data", "restaurant.json");
+  
+    const fileData = fs.readFileSync(filePath);
+    const storeRestaurants = JSON.parse(fileData);
+  
+    storeRestaurants.push(restaurant);
+  
+    fs.writeFileSync(filePath, JSON.stringify(storeRestaurants));
+  
+    res.redirect("/confirm");
+  });
 app.get("/about", function (req, res) {
-  htmlFilePath = path.join(__dirname, "views", "about.html");
-  res.sendFile(htmlFilePath);
+    res.render('about')
 });
 app.get("/confirm", function (req, res) {
-  htmlFilePath = path.join(__dirname, "views", "confirm.html");
-  res.sendFile(htmlFilePath);
+    res.render('confirm')
 });
 app.get("/restaurants", function (req, res) {
-  htmlFilePath = path.join(__dirname, "views", "restaurants.html");
-  res.sendFile(htmlFilePath);
+    res.render('restaurants')
 });
 app.listen(3000);
