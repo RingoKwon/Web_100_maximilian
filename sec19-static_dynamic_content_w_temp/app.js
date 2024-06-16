@@ -51,7 +51,15 @@ app.get("/restaurants", function (req, res) {
 
 app.get("/restaurants/:id", function (req, res) {
   const restaurantId = req.params.id;
-  res.render("restaurant-detail", { rid: restaurantId });
+  const filePath = path.join(__dirname, "data", "restaurant.json");
+
+  const fileData = fs.readFileSync(filePath);
+  const storeRestaurants = JSON.parse(fileData);
+  for (const restaurant of storeRestaurants) {
+    if (restaurant.id === restaurantId) {
+      return res.render("restaurant-detail", { restaurant: restaurant });
+    }
+  }
 });
 
 app.listen(3000);

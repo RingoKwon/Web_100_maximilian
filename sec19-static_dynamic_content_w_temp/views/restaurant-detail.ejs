@@ -15,14 +15,12 @@
     <script src="scripts/responsive.js" defer></script>
   </head>
   <body>
-    <%- include('includes/header') %>
-    <%- include('includes/drawer') %> 
+    <%- include('includes/header') %> <%- include('includes/drawer') %>
     <main>
-     <!-- <h1>
-       restaurant.name ejs need </h1>  -->
-     <p>Cuisine | Adress</p>
-     <p>Description of the restaurant</p>
-     <a href="">View Website</a>
+      <h1><%= restaurant.name %></h1>
+      <p><%= restaurant.cuisine %> | <%= restaurant.address %></p>
+      <p><%= restaurant.description %></p>
+      <a href="<%= restaurant.website %>">View Website</a>
     </main>
   </body>
 </html>
