@@ -11,25 +11,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles/shared.css" />
-    <link rel="stylesheet" href="styles/restaurants.css" />
+    <link rel="stylesheet" href="/styles/restaurants.css" />
     <script src="scripts/responsive.js" defer></script>
   </head>
   <body>
     <%- include('includes/header') %>
     <%- include('includes/drawer') %> 
     <main>
-      <h1>Recommended restaurants</h1>
-      <% if (numberOfRestaurants === 0 ){ %>
-      <p>No Restaurants to recomment - maybe recommend some</p>
-      <% } else { %>
-      <p>Find your next favorite restaurants with help of our other users!</p>
-      <p>we found <%= numberOfRestaurants %> restaurants.</p>
-      <ul id="restaurants-list">
-        <% for(const restaurant of restaurants){ %>
-        <%- include('includes/restaurants/restaurant-items', {restaurant: restaurant}) %>
-        <% } %>
-      </ul>
-      <% } %>
+     <h1>TITLE OF THE RESTAURANT <%= rid %></h1> 
+     <p>Cuisine | Adress</p>
+     <p>Description of the restaurant</p>
+     <a href="">View Website</a>
     </main>
   </body>
 </html>
