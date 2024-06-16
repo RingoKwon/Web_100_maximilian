@@ -21,7 +21,7 @@ app.get("/recommend", function (req, res) {
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
   restaurant.id = uuid.v4();
-  const filePath = path.join(__dirname, "data", "restaurant.json");
+  const filePath = path.join(__dirname, "data", "restaurants.json");
 
   const fileData = fs.readFileSync(filePath);
   const storeRestaurants = JSON.parse(fileData);
@@ -39,7 +39,7 @@ app.get("/confirm", function (req, res) {
   res.render("confirm");
 });
 app.get("/restaurants", function (req, res) {
-  const filePath = path.join(__dirname, "data", "restaurant.json");
+  const filePath = path.join(__dirname, "data", "restaurants.json");
 
   const fileData = fs.readFileSync(filePath);
   const storeRestaurants = JSON.parse(fileData);
@@ -51,7 +51,7 @@ app.get("/restaurants", function (req, res) {
 
 app.get("/restaurants/:id", function (req, res) {
   const restaurantId = req.params.id;
-  const filePath = path.join(__dirname, "data", "restaurant.json");
+  const filePath = path.join(__dirname, "data", "restaurants.json");
 
   const fileData = fs.readFileSync(filePath);
   const storeRestaurants = JSON.parse(fileData);
@@ -59,7 +59,15 @@ app.get("/restaurants/:id", function (req, res) {
     if (restaurant.id === restaurantId) {
       return res.render("restaurant-detail", { restaurant: restaurant });
     }
+    res.status(404).render("404");
   }
 });
 
+app.use(function (req, res) {
+  res.status(404).render("404");
+});
+
+app.use(function (event, req, res, next) {
+  res.status(500).render("500");
+});
 app.listen(3000);
