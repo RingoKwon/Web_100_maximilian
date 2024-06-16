@@ -1,1 +1,18 @@
-[{"id":"r1","name":"a","address":"a","cuisine":"a","website":"https://www.google.com","description":"a"},{"name":"dynamic1","address":"dd","cuisine":"d","website":"https://www.google.com","description":"fjk","id":"a00cd25b-5e5b-4a24-b7b5-2723d5e22b22"}]
+[
+  {
+    "id": "r1",
+    "name": "a",
+    "address": "a",
+    "cuisine": "a",
+    "website": "https://www.google.com",
+    "description": "a"
+  },
+  {
+    "name": "dynamic1",
+    "address": "dd",
+    "cuisine": "d",
+    "website": "https://www.google.com",
+    "description": "fjk",
+    "id": "a00cd25b-5e5b-4a24-b7b5-2723d5e22b22"
+  }
+]
