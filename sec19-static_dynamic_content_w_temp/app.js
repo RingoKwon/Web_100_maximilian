@@ -13,9 +13,6 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", function (req, res) {
-  res.render("index");
-});
 app.get("/recommend", function (req, res) {
   res.render("recommend");
 });
@@ -29,9 +26,6 @@ app.post("/recommend", function (req, res) {
   resData.storeRestaurants(restaurants);
 
   res.redirect("/confirm");
-});
-app.get("/about", function (req, res) {
-  res.render("about");
 });
 app.get("/confirm", function (req, res) {
   res.render("confirm");
