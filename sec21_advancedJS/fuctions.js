@@ -1,5 +1,6 @@
 function greetUser(greetingPrefix, userName = "user") {
-  console.log(greetingPrefix + " " + userName + "!");
+//   console.log(greetingPrefix + " " + userName + "!");
+    console.log(`${greetingPrefix} ${userName}`)
 }
 
 greetUser("Ringo");
@@ -15,22 +16,20 @@ function sumUp(numbers) {
 
 console.log(sumUp([1, 2, 3, 1]));
 
-// rest parameter 
+// rest parameter
 function sumUpRest(...numbers) {
-    let result = 0;
-    for (const number of numbers) {
-      result += number;
-    }
-    return result;
+  let result = 0;
+  for (const number of numbers) {
+    result += number;
   }
-  
-  console.log(sumUpRest(10, 2, 3, 1));
+  return result;
+}
 
-  const inputNumbers = [1,2,3]
+console.log(sumUpRest(10, 2, 3, 1));
 
-  console.log(sumUpRest(inputNumbers))
-  console.log(sumUpRest(...inputNumbers)) // it arrow list -> series of num 
+const inputNumbers = [1, 2, 3];
 
-  
+console.log(sumUpRest(inputNumbers));
+console.log(sumUpRest(...inputNumbers)); // it arrow list -> series of num
 
-  
+console.log(sumUp)
