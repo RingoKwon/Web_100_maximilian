@@ -2,6 +2,7 @@ const path = require('path');
 
 const express = require('express');
 
+
 const blogRoutes = require('./routes/blog');
 
 const app = express();
