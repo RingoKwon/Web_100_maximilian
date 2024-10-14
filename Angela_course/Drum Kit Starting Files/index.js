@@ -4,4 +4,3 @@ for (var i = 0; numberOfDrumButtons; i++) {
     alert("I got clicked!");
   });
 }
-d
