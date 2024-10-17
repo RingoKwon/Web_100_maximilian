@@ -6,6 +6,7 @@ for (let i = 0; i < drumButtonsLen; i++) {
     var buttonLetter = this.innerHTML;
 
     makeSound(buttonLetter);
+    animation(buttonLetter);
   });
 }
 
@@ -13,6 +14,7 @@ document.addEventListener("keydown", function (event) {
   var keyLette = event.key;
 
   makeSound(keyLette);
+  animation(keyLette);
 });
 
 function makeSound(key) {
@@ -48,4 +50,16 @@ function makeSound(key) {
     default:
       console.log(key);
   }
+}
+
+function animation(key){
+  
+  activeButton = document.querySelector("." + key)
+  activeButton.classList.add("pressed");
+  setTimeout(function(){
+   activeButton.classList.remove("pressed");
+  },100
+  );
+
+
 }
