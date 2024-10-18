@@ -10,6 +10,11 @@ function randomNumber(){
 var gamePattern = []; 
 gamePattern.push(randomChoosenColor); 
 
+
+var audio = new Audio('sounds/'+randomChoosenColor + '.mp3');
+
+audio.play();
+
 setTimeout(function () {
     $("#" + randomChoosenColor).addClass("pressed"); // 선택자에 #을 추가
     
