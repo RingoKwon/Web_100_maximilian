@@ -14,18 +14,24 @@ var audio = new Audio("sounds/" + randomChoosenColor + ".mp3");
 
 audio.play();
 
-setTimeout(function () {
-  $("#" + randomChoosenColor).addClass("pressed"); // 선택자에 #을 추가
-
-  setTimeout(function () {
-    $("#" + randomChoosenColor).removeClass("pressed"); // 클래스 제거 추가
-  }, 100);
-}, 100);
-
 // user choosen color
+var userChoosenColor;
+var userClickPattern = [];
 var btnLen = document.querySelectorAll(".btn").length;
+
 for (let i = 0; i < btnLen; i++) {
   document.querySelectorAll(".btn")[i].addEventListener("click", function () {
-    console.log(this.id);
+    userChoosenColor = this.id;
+    userClickPattern.push(userChoosenColor);
   });
 }
+// pattor array
+
+// auto select animation
+setTimeout(function () {
+  $("#" + randomChoosenColor).addClass("pressed");
+
+  setTimeout(function () {
+    $("#" + randomChoosenColor).removeClass("pressed");
+  }, 100);
+}, 100);
