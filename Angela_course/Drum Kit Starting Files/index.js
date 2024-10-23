@@ -52,14 +52,10 @@ function makeSound(key) {
   }
 }
 
-function animation(key){
-  
-  activeButton = document.querySelector("." + key)
+function animation(key) {
+  activeButton = document.querySelector("." + key);
   activeButton.classList.add("pressed");
-  setTimeout(function(){
-   activeButton.classList.remove("pressed");
-  },100
-  );
-
-
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
 }

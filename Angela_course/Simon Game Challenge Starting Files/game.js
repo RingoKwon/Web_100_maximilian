@@ -23,6 +23,7 @@ function nextSequence() {
   var randomChoosenColor = buttonColours[randomIndex];
   gamePattern.push(randomChoosenColor);
 
+
   setTimeout(function () {
     $("#" + randomChoosenColor).addClass("pressed");
 
@@ -35,3 +36,5 @@ function nextSequence() {
   var audio = new Audio("sounds/" + randomChoosenColor + ".mp3");
   audio.play();
 }
+
+nextSequence();
