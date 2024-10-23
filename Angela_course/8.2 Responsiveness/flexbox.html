@@ -8,13 +8,18 @@
   <style>
     .flex-container {
       display: flex;
+      flex-direction: row;
+      width: 1000px;
+
     }
 
     .card {
       background: blue;
       border: 30px solid white;
       height: 100px;
+
       flex: 1;
+
     }
 
     .first {
@@ -24,6 +29,13 @@
     .second {
       flex: 0.5;
     }
+
+    .third {
+      flex: 1;
+    }
+    .forth {
+      flex: 2
+    }
   </style>
 </head>
 
@@ -32,8 +44,8 @@
   <div class="flex-container">
     <div class="first card"></div>
     <div class="second card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <div class="third card"></div>
+    <div class="forth card"></div>
   </div>
 
 
