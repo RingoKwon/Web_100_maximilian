@@ -6,7 +6,24 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+#purple { 
+  color: purple;
+}
+#flex { 
+  display: flex;
+
+  flex-direction: row;
+  height: 200px;
+}
+.card { 
+  display: flex;
+
+}
+img { 
+float: left;
+}
 .main {
+
   flex: 1;
 }
 
