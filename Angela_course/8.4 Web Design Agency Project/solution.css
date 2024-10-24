@@ -23,10 +23,11 @@ footer {
   height: 200px;
   float: left;
   margin-right: 50px;
+  /* margin: 20px; */
 }
 
 .card {
-  width: 45%;
+  width: 49%;
 }
 
 .left {
