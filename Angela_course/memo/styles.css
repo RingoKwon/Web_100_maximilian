@@ -1,0 +1,49 @@
+/* 플렉스 컨테이너 스타일 */
+.container {
+    display: flex; 
+    /* height: 300px;  */
+    flex-direction: row;
+    border: 2px solid #333; 
+
+}
+
+/* 모든 플렉스 아이템에 적용되는 공통 스타일 */
+.item {
+    /* 내부 여백 */
+    /* padding: 20px; */
+    /* 텍스트 색상 */
+    color: white;
+    /* 글자 크기 */
+    font-size: 24px;
+    /* 텍스트 중앙 정렬 */
+    text-align: center;
+    flex-basis: 200px;
+
+}
+
+/* 첫 번째 플렉스 아이템 스타일 */
+.item1 {
+    /* 배경색 설정 */
+    background-color: #ff6b6b;
+    /* 플렉스 성장 비율 1 */
+    /* flex: 1; */
+    /* width: 300px; */
+    min-width: 150px;
+    /* flex-basis: 150px; */
+}
+
+/* 두 번째 플렉스 아이템 스타일 */
+.item2 {
+    /* 배경색 설정 */
+    background-color: #4ecdc4;
+    /* 플렉스 성장 비율 2 (다른 아이템의 2배) */
+    /* flex: 2; */
+}
+
+/* 세 번째 플렉스 아이템 스타일 */
+.item3 {
+    /* 배경색 설정 */
+    background-color: #45b7d1;
+    /* 플렉스 성장 비율 1 */
+    /* flex: 1; */
+}
