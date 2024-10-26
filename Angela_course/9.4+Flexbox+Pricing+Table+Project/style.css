@@ -1,18 +1,32 @@
 body {
   font-family: "Sono", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* Hint: What can you do with a media query and flexbox? */
 @media (max-width: 600px) {
-.pricing-container{
+  body {
+    align-items: flex-start;
+  }
+
+  .pricing-container {
     flex-direction: column;
     align-items: center;
+    height: auto;
+  }
 
+  .pricing-plan {
+    width: 80%;
+    min-width: auto;
+    margin-bottom: 1rem;
+  }
 }
-}
+
+
 li {
   list-style: none;
 }
@@ -22,7 +36,8 @@ li {
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  width: 100%;
+  padding: 2rem;
 }
 
 .pricing-plan {
@@ -30,13 +45,14 @@ li {
   background-color: #e2e2e2;
   border-radius: 4px;
   box-shadow: 1px 1px 1px gray;
-  padding: 10px;
-  /* flex: 1; */
+  padding: 20px;
   width: 300px;
-
-  height: 200px;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 .plan-title {
   font-size: 1.5rem;
   font-weight: bold;
