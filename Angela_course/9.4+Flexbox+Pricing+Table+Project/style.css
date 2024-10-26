@@ -45,6 +45,13 @@ li {
   font-size: 2rem;
   font-weight: bold;
 }
+.plan-features{
+    padding: 0;
+    margin: 0;
+}
+.plan-features li {
+    margin: 8px;
+}
 .plan-button {
   background-color: orange;
   border: none;
