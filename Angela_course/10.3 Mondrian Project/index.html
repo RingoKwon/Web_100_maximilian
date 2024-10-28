@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #container { 
+      background-color: #000;
+      width: 80vh;
+      height: 90vh;
+      display: grid;
+      grid-template-rows: 6fr 1.5fr 0.05fr 1fr 0.2fr;
+      grid-template-columns: 1.5fr 1fr 1fr 0.2fr;
+      gap: 9px;
+      overflow: hidden;
+
+    }
+    .red {
+      background-color: red;
+    }
+    .white { 
+      background-color: white;
+    }
+    .blue { 
+      background-color: blue;
+    }
+    #ajd2 { 
+      grid-column: span 3 ;
+    }
+    #ajd3{
+      grid-row: span 3;
+    }
+    #ajd4{
+      grid-row: span 3;
+      grid-column: span 2;
+    }
+.black{ 
+  background-color: black;
+}
+.yellow{
+  background-color: yellow;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <div id = "container" >
+      <div id="ajd1" class="red"></div>
+      <div id="ajd2" class="white"></div>
+      <div id="ajd3" class="white"></div>
+      <div id="ajd4" class="white"></div>
+      <div id="ajd5" class="blue"></div>
+      <div id="ajd1" class="black"></div>
+      <div id="ajd1" class="white"></div>
+      <div id="ajd1" class="white"></div>
+      <div id="ajd1" class="yellow"></div>
+      <div id="ajd1" class="black"></div>
+      <div id="ajd1" class="white"></div>
+
+   </div>
+</body>
+
+</html>
