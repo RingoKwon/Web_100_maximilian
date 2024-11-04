@@ -1,5 +1,5 @@
-var gamePattern = [];
 var buttonColours = ["red", "blue", "green", "yellow"];
+var gamePattern = [];
 var userClickPattern = [];
 
 function nextSequence() {
