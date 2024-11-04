@@ -60,11 +60,18 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       bodySelection.removeClass("game-over");
     }, 100);
+    $("#level-title").text("Game Over, Press Any Key to Restart");
 
     console.log(
       "False" + userClickPattern[latestAswer] + gamePattern[latestAswer]
     );
   }
+}
+
+function startOver() {
+  level = [];
+  gamePattern = [];
+  userClickPattern = [];
 }
 
 // for loop
