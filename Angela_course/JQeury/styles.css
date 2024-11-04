@@ -1,3 +1,7 @@
 body { 
     background-color: rebeccapurple;
 }
+.big_font {
+    color : red;
+    font-size: 90px;
+}
