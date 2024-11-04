@@ -1,7 +1,7 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickPattern = [];
-
+var level = 0;
 
 function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);
@@ -13,6 +13,7 @@ function nextSequence() {
     .fadeIn(100);
 
   playSound(randomChosenColour);
+  level++;
 }
 
 $(".btn").on("click", function () {
@@ -23,13 +24,12 @@ $(".btn").on("click", function () {
   animatePress(btnId);
 });
 
-$(document).on("keydown", function(event){
-    if(event.key.toLowerCase() ===  'a'){
-        nextSequence();
-        $("#level-title").text("Level 1")
-    }
-
-})
+$(document).on("keydown", function (event) {
+  if (event.key.toLowerCase() === "a") {
+    nextSequence();
+    $("#level-title").text("Level "+level);
+  }
+});
 
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
