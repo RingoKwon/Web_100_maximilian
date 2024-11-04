@@ -19,11 +19,19 @@ $(".btn").on("click", function () {
   var btnId = clickedElement.attr("id");
   userClickPattern.push(btnId);
   playSound(btnId);
+  animatePress(btnId);
 });
 
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
+}
+function animatePress(currentColor) {
+  var btnSelected = $("#" + currentColor);
+  btnSelected.addClass("pressed");
+  setTimeout(function () {
+    btnSelected.removeClass("pressed");
+  }, 100);
 }
 
 // for loop
