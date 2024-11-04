@@ -6,9 +6,9 @@ $(".c2").css("color", "red");
 
 $("a").attr("href", "www.hh.com");
 
-$("h1").click(function () {
-  $("h1").css("color", "black");
-});
+$("h1").on("mouseover", function(){
+    $("h1").css("color","green")
+})
 
 $("button").click(function () {
   $("h1").css("color", "yellow");
