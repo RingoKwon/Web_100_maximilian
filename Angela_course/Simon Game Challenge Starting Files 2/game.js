@@ -27,7 +27,7 @@ $(".btn").on("click", function () {
 $(document).on("keydown", function (event) {
   if (event.key.toLowerCase() === "a") {
     nextSequence();
-    $("#level-title").text("Level "+level);
+    $("#level-title").text("Level " + level);
   }
 });
 
@@ -41,6 +41,21 @@ function animatePress(currentColor) {
   setTimeout(function () {
     btnSelected.removeClass("pressed");
   }, 100);
+}
+function checkAnswer(currentLevel) {
+  var latestAswer = userClickPattern.length - 1;
+  if (userClickPattern[latestAswer] === gamePattern[latestAswer]) {
+    setTimeout(function () {
+      nextSequence();
+    }, 1000);
+    console.log(
+      "True" + userClickPattern[latestAswer] + gamePattern[latestAswer]
+    );
+  } else {
+    console.log(
+      "False" + userClickPattern[latestAswer] + gamePattern[latestAswer]
+    );
+  }
 }
 
 // for loop
