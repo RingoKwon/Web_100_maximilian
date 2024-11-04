@@ -48,12 +48,19 @@ function checkAnswer(currentLevel) {
     setTimeout(function () {
       nextSequence();
     }, 1000);
+
     console.log(
       "True" + userClickPattern[latestAswer] + gamePattern[latestAswer]
     );
   } else {
     var audio = new Audio("./sounds/wrong.mp3");
-    audio.play()
+    audio.play();
+    var bodySelection = $("body");
+    bodySelection.addClass("game-over");
+    setTimeout(function () {
+      bodySelection.removeClass("game-over");
+    }, 100);
+
     console.log(
       "False" + userClickPattern[latestAswer] + gamePattern[latestAswer]
     );
