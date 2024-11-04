@@ -52,6 +52,8 @@ function checkAnswer(currentLevel) {
       "True" + userClickPattern[latestAswer] + gamePattern[latestAswer]
     );
   } else {
+    var audio = new Audio("./sounds/wrong.mp3");
+    audio.play()
     console.log(
       "False" + userClickPattern[latestAswer] + gamePattern[latestAswer]
     );
