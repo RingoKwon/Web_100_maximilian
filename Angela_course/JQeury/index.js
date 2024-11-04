@@ -19,7 +19,6 @@ $("button").click(function () {
 // 또는
 
 // 방법 2: keydown 이벤트 사용
-$("input").keypress(function(event){
-    $("h1").text(event.key)
-    event.key
+$(document).keypress(function(event){
+    $("h1").text(event.key);
 });
