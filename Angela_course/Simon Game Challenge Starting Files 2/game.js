@@ -11,14 +11,20 @@ function nextSequence() {
     .fadeOut(100)
     .fadeIn(100);
 
-  var audio = new Audio("sounds/" + randomChosenColour + ".mp3");
-  audio.play();
+  playSound(randomChosenColour);
 }
 
 $(".btn").on("click", function () {
   var clickedElement = $(this);
-  userClickPattern.push(clickedElement.attr("id"));
+  var btnId = clickedElement.attr("id");
+  userClickPattern.push(btnId);
+  playSound(btnId);
 });
+
+function playSound(name) {
+  var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+}
 
 // for loop
 // for (var i = 0; i < gamePattern.length; i++) {
