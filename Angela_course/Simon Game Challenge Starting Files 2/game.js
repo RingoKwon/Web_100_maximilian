@@ -15,6 +15,7 @@ function nextSequence() {
 
   playSound(randomChosenColour);
   level++;
+  $("#level-title").text("Level " + level);
 }
 var statusWhile = false;
 
