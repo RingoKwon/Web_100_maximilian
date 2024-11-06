@@ -18,9 +18,16 @@ inquirer
     }
   ])
   .then((answers) => {
-    // answers.url will contain the user's input
-    var qr_img = qr.image(answers.url)
-    fs.writeFile("image.txt", qr_img)
+    // Create QR code image
+    var qr_img = qr.image(answers.url);
+    // Save QR code as PNG file
+    qr_img.pipe(fs.createWriteStream('qr_code.png'));
+    
+    // Save URL to text file
+    fs.writeFile("url.txt", answers.url, (err) => {
+      if (err) throw err;
+      console.log('URL has been saved!');
+    });
   })
   .catch((error) => {
     if (error.isTtyError) {
