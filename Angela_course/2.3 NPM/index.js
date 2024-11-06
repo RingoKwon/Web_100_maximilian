@@ -1,9 +1,9 @@
-import generateName from "sillyName"
-import {randomSuperhero} from 'superheroes';
+import generateName from "sillyname"
+import superheroes from 'superheroes';
 
 // var generateName = require("sillyname");
 var sillyName = generateName();
-var heroName = randomSuperhero();
+var heroName = superheroes.randomSuperhero;
 
     console.log(`My name ${sillyName}`);
     console.log(`My name ${heroName}`);
