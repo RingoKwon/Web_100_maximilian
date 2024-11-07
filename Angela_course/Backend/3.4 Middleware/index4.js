@@ -23,11 +23,12 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   fName = req.body.street;
   lName = req.body.pet;
-  console.log(fName+lName)
+  console.log(fName + lName);
+});
+app.get("/submit", (req, res) => {
+  res.sendFile(__dirname + "/public/submit.html");
 });
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-
