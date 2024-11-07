@@ -23,10 +23,18 @@ app.get("/", (req, res) => {
 app.post("/submit", (req, res) => {
   fName = req.body.street;
   lName = req.body.pet;
-  console.log(fName + lName);
+  const bandName = fName + lName;
+  res.redirect(`/submit?bandName=${bandName}`);
 });
+
 app.get("/submit", (req, res) => {
-  res.sendFile(__dirname + "/public/submit.html");
+  const bandName = req.query.bandName;
+  // Instead of sending static file, send dynamic HTML
+  res.send(`
+    <h1>Your band name is: </h1>
+    <p>${bandName}</p>
+    <a href="/">Generate another name</a>
+  `);
 });
 
 app.listen(port, () => {
