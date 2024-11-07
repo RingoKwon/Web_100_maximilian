@@ -14,25 +14,32 @@ var fName, lName;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
+function brandNameGenerator(req, res, next) {
+  console.log(req.body);
+  fName = req.body["street"];
+  lName = req.body["pet"]
+  next();
+}
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
+app.use(brandNameGenerator);
+
+// app.post("/submit", (req, res) => {
+//   fName = req.body.street;
+//   lName = req.body.pet;
+//   const bandName = fName + lName;
+//   // res.redirect(`/submit?bandName=${bandName}`);
+// });
 
 app.post("/submit", (req, res) => {
-  fName = req.body.street;
-  lName = req.body.pet;
-  const bandName = fName + lName;
-  res.redirect(`/submit?bandName=${bandName}`);
-});
-
-app.get("/submit", (req, res) => {
-  const bandName = req.query.bandName;
+  // const bandName = req.query.bandName;
   // Instead of sending static file, send dynamic HTML
   res.send(`
     <h1>Your band name is: </h1>
-    <p>${bandName}</p>
+    <p>${fName+lName}</p>
     <a href="/">Generate another name</a>
   `);
 });
