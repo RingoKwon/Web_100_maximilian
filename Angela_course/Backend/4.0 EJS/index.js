@@ -13,10 +13,21 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+var date = new Date()
+var dayOfWeek = date.getDay()
+
 app.get("/", (req, res) => {
+    let dayType = "weekday";
+    let advice = "it's time to work hard";
+    
+    if ([0, 6].includes(dayOfWeek)) {
+        dayType = "weekend";
+        advice = "it's time to relax";
+    }
+    
     res.render("solution", {
-        dayType: "Monday",
-        advice: "it's time to work hard"
+        dayType: dayType,
+        advice: advice
     });
 });
 
