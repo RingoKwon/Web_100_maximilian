@@ -20,11 +20,11 @@
 
     <!-- List goes here if current second is even. -->
     <ul>
-      <% for (var i=0; i < items.length; i++) { %>
+      <% items.forEach(fruit => { %>
         <li>
-          <%= items[i] %>
+          <%= fruit %>
         </li>
-        <% } %>
+        <% }); %>
     </ul>
 
 
