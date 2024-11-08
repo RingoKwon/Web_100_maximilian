@@ -9,3 +9,7 @@ app.get("/", (req, res) => {
     advice: "it's time to work hard",
   });
 });
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
