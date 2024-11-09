@@ -22,7 +22,10 @@ app.get("/", (req, res) => {
 
 app.post("/submit", (req, res) => {
   //Step 2 - Make the generate name functionality work
-  
+  const idxAdj= Math.floor(Math.random()*adj.length);
+  const idxNoun= Math.floor(Math.random()*noun.length);
+
+
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
   //1. You should randomly pick an adjective from the const "adj" and a noun from const "noun",
