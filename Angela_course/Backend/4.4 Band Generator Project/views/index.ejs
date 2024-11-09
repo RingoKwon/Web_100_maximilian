@@ -5,10 +5,10 @@
     Change the h1 to show the adjective and noun.
     But when the user first goes on the website and there is no adjective and noun, 
     Show the default h1 below -->
-  <% if(locals._bandName === null ){ %>
+  <% if(_bandName === null ){ %>
     <h1>Cool Band Name Generator</h1>
     <% }else {%>
-      <h1><%= locals._bandName %></h1>
+      <h1><%= _bandName %></h1>
         <% } %>
           <form action="/submit" method="POST">
             <input type="submit" value="Generate Name">
