@@ -13,24 +13,27 @@ const port = 3000;
 //Hint: Google to find out how to get the current year using JS.
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"))
+app.use(express.static("public"));
 
+
+const year = new Date().getFullYear();
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
-
-  res.render("index.ejs",{
-    _bandName: null
-  })
+  res.render("index.ejs", {
+    _bandName: null,
+    year: year
+  });
 });
 
 app.post("/submit", (req, res) => {
   //Step 2 - Make the generate name functionality work
-  const idxAdj= Math.floor(Math.random()*adj.length);
-  const idxNoun= Math.floor(Math.random()*noun.length);
-  var bandName = adj[idxAdj] + " " + noun[idxNoun]
+  const idxAdj = Math.floor(Math.random() * adj.length);
+  const idxNoun = Math.floor(Math.random() * noun.length);
+  var bandName = adj[idxAdj] + " " + noun[idxNoun];
   res.render("index.ejs", {
-    _bandName: bandName
-  })
+    _bandName: bandName,
+    year:year
+  });
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
   //1. You should randomly pick an adjective from the const "adj" and a noun from const "noun",
