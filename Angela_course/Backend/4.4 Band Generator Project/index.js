@@ -17,15 +17,20 @@ app.use(express.static("public"))
 
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
-  res.render("index.ejs")
+
+  res.render("index.ejs",{
+    _bandName: null
+  })
 });
 
 app.post("/submit", (req, res) => {
   //Step 2 - Make the generate name functionality work
   const idxAdj= Math.floor(Math.random()*adj.length);
   const idxNoun= Math.floor(Math.random()*noun.length);
-
-
+  var bandName = adj[idxAdj] + " " + noun[idxNoun]
+  res.render("index.ejs", {
+    _bandName: bandName
+  })
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
   //1. You should randomly pick an adjective from the const "adj" and a noun from const "noun",
