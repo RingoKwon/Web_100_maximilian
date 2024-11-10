@@ -4,20 +4,14 @@ body{
     font-family:'Roboto', sans-serif ;
     width: 95%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 90%;
 
 }
 .blogname a {
     color: white;
 }
 
-.header-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    margin-bottom: 1px;
-}
+
 .blogname{
     text-decoration: none;
     font-size: 40px;
@@ -45,5 +39,13 @@ header {
     border-bottom: 1px solid white;
     height: 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+
+}
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-bottom: 10px;
 }
