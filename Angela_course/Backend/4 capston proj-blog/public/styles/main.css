@@ -1,3 +1,10 @@
+/* Add CSS reset at the beginning */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
   color: white;
@@ -7,9 +14,16 @@ body {
   max-width: 90%;
 }
 
+/* Use CSS custom properties for repeated values */
+:root {
+  --primary-color: white;
+  --accent-color: #ffd700;
+  --border-style: 1px solid var(--primary-color);
+}
+
 header {
-  border-bottom: 1px solid white;
-  height: 100px;
+  border-bottom: var(--border-style);
+  min-height: 100px;
   display: flex;
   align-items: flex-end;
 }
@@ -45,38 +59,39 @@ header {
   font-size: 40px;
   font-weight: bold;
 }
-main { 
-    height: 800px ;
-    border-bottom: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-footer { 
-    margin: 10px ; 
-
+main {
+  border-bottom: var(--border-style);
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-footer p{
-    margin: 1px ;
-    display: flex;
-    justify-content: center;
+footer {
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer p {
+  margin: 1px;
 }
 
 .blog-header {
-    font-size: 2.5rem;
-    color: #fff;
-    padding: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 2rem;
 }
 
 .blog-header h1 {
-    color: #FFD700; /* Yellow color for "Ringo's Blog" */
-    margin-bottom: 0.5rem;
+  color: #ffd700; /* Yellow color for "Ringo's Blog" */
+  margin-bottom: 0.5rem;
 }
 
 .blog-header h2 {
-    
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .highlight {
-    color: #FFD700; /* Yellow color for "Data" */
+  color: #ffd700; /* Yellow color for "Data" */
 }
