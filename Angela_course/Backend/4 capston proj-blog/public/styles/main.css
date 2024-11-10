@@ -48,7 +48,9 @@ header {
 main { 
     height: 800px ;
     border-bottom: 1px solid white;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 footer { 
     margin: 10px ; 
 
@@ -57,4 +59,24 @@ footer p{
     margin: 1px ;
     display: flex;
     justify-content: center;
+}
+
+.blog-header {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 2rem;
+}
+
+.blog-header h1 {
+    color: #FFD700; /* Yellow color for "Ringo's Blog" */
+    margin-bottom: 0.5rem;
+}
+
+.blog-header h2 {
+    
+    margin-top: 0;
+}
+
+.highlight {
+    color: #FFD700; /* Yellow color for "Data" */
 }
