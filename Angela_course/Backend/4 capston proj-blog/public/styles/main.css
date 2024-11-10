@@ -8,7 +8,8 @@ body{
 
 }
 .blogname a {
-    color: white;
+
+    text-decoration: none;
 }
 
 
