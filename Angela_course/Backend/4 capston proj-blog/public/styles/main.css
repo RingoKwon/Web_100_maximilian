@@ -45,3 +45,16 @@ header {
   font-size: 40px;
   font-weight: bold;
 }
+main { 
+    height: 800px ;
+    border-bottom: 1px solid white;
+}
+footer { 
+    margin: 10px ; 
+
+}
+footer p{
+    margin: 1px ;
+    display: flex;
+    justify-content: center;
+}
