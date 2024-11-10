@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/posts">All Posts</a>
+            </nav>
+        </header>
+
+        <main class="post-content">
+            <article>
+                <h1><%= post.title %></h1>
+                <div class="post-meta">
+                    <span class="date">Posted on <%= post.date %></span>
+                    <span class="author">by <%= post.author %></span>
+                </div>
+                
+                <div class="post-body">
+                    <%- post.content %>
+                </div>
+            </article>
+
+            <div class="comments-section">
+                <h2>Comments</h2>
+                <% if (post.comments && post.comments.length > 0) { %>
+                    <% post.comments.forEach(comment => { %>
+                        <div class="comment">
+                            <p class="comment-author"><%= comment.author %></p>
+                            <p class="comment-text"><%= comment.text %></p>
+                            <span class="comment-date"><%= comment.date %></span>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p>No comments yet.</p>
+                <% } %>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; <%= new Date().getFullYear() %> Your Website Name</p>
+        </footer>
+    </div>
+</body>
+</html> 

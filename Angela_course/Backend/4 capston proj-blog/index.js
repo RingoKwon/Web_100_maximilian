@@ -19,6 +19,13 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+app.get("/post", (req, res) => {
+    const post = {
+        title: "새 글 작성",
+    };
+    res.render("posting.ejs", { post: post });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
