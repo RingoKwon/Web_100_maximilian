@@ -1,0 +1,4 @@
+.blogname a {
+    color: white;
+    text-decoration: none; /* 링크 밑줄 제거 (선택사항) */
+} 
