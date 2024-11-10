@@ -1,52 +1,47 @@
-body{
-    background-color: black;
-    color: white;
-    font-family:'Roboto', sans-serif ;
-    width: 95%;
-    margin: 0 auto;
-    max-width: 90%;
-
+body {
+  background-color: black;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 90%;
 }
-
-
 
 header {
-    border-bottom: 1px solid white;
-    height: 100px;
-    display: flex;
-    align-items: flex-end;
-
+  border-bottom: 1px solid white;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
 }
 .header-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 10px;
 }
 .header-icons {
-    display: flex;
-    gap: 1.5rem;
-    padding: 8px 12px;
-    border-radius: 20px;
-    flex-direction: row;
-    align-items: flex-end;
+  display: flex;
+  gap: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .header-icons a {
-    color: white;  /* 아이콘 색상을 흰색으로 설정 */
-    font-size: 1.1rem;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+  color: white; /* 아이콘 색상을 흰색으로 설정 */
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 .blogname a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-
-.blogname{
-    text-decoration: none;
-    font-size: 40px;
-    font-weight: bold;
+.blogname {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
 }
