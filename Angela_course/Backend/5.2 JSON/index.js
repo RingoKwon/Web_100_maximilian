@@ -12,10 +12,9 @@ const obj = JSON.parse(recipeJSON);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 app.get("/", (req, res) => {
-  res.render("index.ejs",{
-    type : null
+  res.render("index.ejs", {
+    type: null,
   });
 });
 
@@ -23,29 +22,36 @@ app.post("/recipe", (req, res) => {
   //Step 3: Write your code here to make this behave like the solution website.
   var choice = req.body.choice;
   var type;
-  if (choice === "chicken") {
-    type = obj[0];
-  } else if (choice === "beef") {
-    type = obj[1];
-  } else if (choice === "fish") {
-    type = obj[2];
+  switch (choice) {
+    case "chicken":
+      type = obj[0];
+      break;
+    case "beef":
+      type = obj[1];
+      break;
+    case "fish":
+      type = obj[2];
+      break;
   }
-  var name = type.name 
-  var portein = type.ingredients.protein.name + ", " + type.ingredients.protein.preparation; 
-  var salsa = type.ingredients.salsa.name; 
-  var topping = type.ingredients.toppings; //loop 
-  topping.forEach(element => {
-    console.log(element.quantity + " of", element.name)
-    
+  // if (choice === "chicken") {
+  //   type = obj[0];
+  // } else if (choice === "beef") {
+  //   type = obj[1];
+  // } else if (choice === "fish") {
+  //   type = obj[2];
+  // }
+  var name = type.name;
+  var portein =
+    type.ingredients.protein.name + ", " + type.ingredients.protein.preparation;
+  var salsa = type.ingredients.salsa.name;
+  var topping = type.ingredients.toppings; //loop
+ 
+  res.render("index.ejs", {
+    name,
+    portein,
+    salsa,
+    topping,
   });
-  console.log(" ")
- res.render("index.ejs", { 
-  name, 
-  portein, 
-  salsa, 
-  topping
- })
-  
 
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
 });
