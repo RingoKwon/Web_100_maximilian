@@ -16,7 +16,7 @@ app.get("/", async (req, res) => {
   try {
     const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
-    res.render("index.ejs", { data: result , error: null});
+    res.render("index.ejs", { data: result });
     // console.log('Response data:', result);
   } catch (error) {
     console.error("Failed to make request:", error.message);
@@ -38,8 +38,8 @@ app.post("/", async (req, res) => {
     const randomActivity = result[Math.floor(Math.random() * result.length)];
     
     res.render("index.ejs", {
-      data: randomActivity,  // randResult 대신 randomActivity 객체를 전달
-      error: null
+      data: randomActivity  // randResult 대신 randomActivity 객체를 전달
+ 
     });
   } catch (error) {
     console.error("Failed to make request:", error.message);
