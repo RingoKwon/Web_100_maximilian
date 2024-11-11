@@ -35,7 +35,23 @@ app.post("/", async (req, res) => {
       `https://bored-api.appbrewery.com/filter?type=${type}&participants=${participants}`
     );
     const result = response.data;
-    console.log(result);
+    
+    const types = [...new Set(result.map(item => item.type))];
+    console.log(types); // ['social', 'education', 'recreational', 'charity']
+    
+    // 랜덤 선택 함수
+    const getRandomType = () => {
+        const randomIndex = Math.floor(Math.random() * types.length);
+        return types[randomIndex];
+    };
+    
+    // 여러번 호출해서 테스트
+    for(let i = 0; i < 5; i++) {
+        console.log(getRandomType()); // 랜덤하게 type 출력
+    }
+    // console.log(result);
+    console.log("type",type)
+
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
