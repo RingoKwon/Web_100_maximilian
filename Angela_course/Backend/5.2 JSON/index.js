@@ -27,7 +27,12 @@ app.post("/recipe", (req, res) => {
   } else if (choice === "fish") {
     type = obj[2];
   }
-  console.log(type);
+  var name = type.name 
+  var portein; 
+  var salsa ; 
+  var topping ; //loop 
+  console.log(name );
+  
 
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
 });
