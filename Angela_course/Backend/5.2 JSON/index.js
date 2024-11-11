@@ -12,8 +12,11 @@ const obj = JSON.parse(recipeJSON);
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs",{
+    type : null
+  });
 });
 
 app.post("/recipe", (req, res) => {
@@ -29,9 +32,14 @@ app.post("/recipe", (req, res) => {
   }
   var name = type.name 
   var portein = type.ingredients.protein.name + ", " + type.ingredients.protein.preparation; 
-  var salsa ; 
-  var topping ; //loop 
-  console.log(name, portein );
+  var salsa = type.ingredients.salsa.name; 
+  var topping = type.ingredients.toppings; //loop 
+ res.render("index.ejs", { 
+  name, 
+  portein, 
+  salsa, 
+  topping
+ })
   
 
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
