@@ -28,10 +28,10 @@ app.post("/recipe", (req, res) => {
     type = obj[2];
   }
   var name = type.name 
-  var portein; 
+  var portein = type.ingredients.protein.name + ", " + type.ingredients.protein.preparation; 
   var salsa ; 
   var topping ; //loop 
-  console.log(name );
+  console.log(name, portein );
   
 
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
