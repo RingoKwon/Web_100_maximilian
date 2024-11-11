@@ -34,6 +34,11 @@ app.post("/recipe", (req, res) => {
   var portein = type.ingredients.protein.name + ", " + type.ingredients.protein.preparation; 
   var salsa = type.ingredients.salsa.name; 
   var topping = type.ingredients.toppings; //loop 
+  topping.forEach(element => {
+    console.log(element.quantity + " of", element.name)
+    
+  });
+  console.log(" ")
  res.render("index.ejs", { 
   name, 
   portein, 

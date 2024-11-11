@@ -28,7 +28,16 @@
         <li>Every other topping</li>
       </ul>
       <% }else { %>
-      <li>dfjkdjf</li>
+        <!-- If no recipe yet, show: -->
+        <h2><%= name %></h2>
+        <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+        <h3>Ingredients:</h3>
+        <ul id="ingredientsList">
+          <li><%= portein %></li>
+          <li><%= salsa %></li>
+  
+          <li>Every other topping</li>
+        </ul>
       <% } %>
 
 
