@@ -15,9 +15,8 @@ app.get("/", async (req, res) => {
   try {
     const response = await axios.get("https://bored-api.appbrewery.com/random");
     const result = response.data;
-    const jsObject = JSON.parse(JSON.stringify(result));
-    res.render("index.ejs", { data: jsObject });
-    console.log('JavaScript Object:', jsObject);
+    res.render("index.ejs", { data: result , error:null});
+    console.log('Response data:', result);
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
