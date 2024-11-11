@@ -35,8 +35,9 @@
         <ul id="ingredientsList">
           <li><%= portein %></li>
           <li><%= salsa %></li>
-  
-          <li>Every other topping</li>
+  <% topping.forEach(element => { %>
+          <li><%=element.quantity  %> of<%= element.name %></li>
+          <% }); %>
         </ul>
       <% } %>
 
