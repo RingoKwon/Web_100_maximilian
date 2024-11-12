@@ -77,6 +77,12 @@ app.get("/apiKey", async (req, res) => {
   }
 });
 
+const config = {
+  headers: {
+    Authorization: `Bearer ${yourBearerToken}`,
+
+  }
+}
 app.get("/bearerToken", async (req, res) => {
   //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
   //and get the secret with id of 42
@@ -90,11 +96,7 @@ app.get("/bearerToken", async (req, res) => {
   });
   */
   try {
-    const response = await axios.get(API_URL + "secrets/1", {
-      headers: {
-        Authorization: `Bearer ${yourBearerToken}`,
-      },
-    });
+    const response = await axios.get(API_URL + "secrets/1", config);
     const result = response.data;
     res.render("index.ejs", { content: JSON.stringify(result) });
   } catch {
