@@ -60,7 +60,12 @@ app.get("/apiKey", async (req, res) => {
   //HINT: You need to provide a query parameter of apiKey in the request.
   try {
     const response = await axios.get(
-      API_URL + "filter?score=5&apiKey=" + yourAPIKey
+      API_URL + "filter", {
+        params:{
+          score: 5, 
+          apiKey: yourAPIKey
+        }
+      }
     );
     const result = response.data;
     res.render("index.ejs", { content: JSON.stringify(result) });
