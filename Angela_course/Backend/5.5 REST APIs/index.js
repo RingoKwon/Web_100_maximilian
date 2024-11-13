@@ -57,11 +57,45 @@ app.post("/post-secret", async (req, res) => {
 app.post("/put-secret", async (req, res) => {
   const searchId = req.body.id;
   // TODO 3: Use axios to PUT the data from req.body to the secrets api servers.
+  const secret = req.body.secret;
+  const score = req.body.score;
+
+  try {
+    const result = await axios.put(
+      API_URL + "/secrets/" + searchId,
+      {
+        secret: secret,
+        score: score
+      },
+      config
+    );
+
+    res.render("index.ejs", { content: JSON.stringify(result.data) });
+  } catch (error) {
+    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+  }
 });
 
 app.post("/patch-secret", async (req, res) => {
-  const searchId = req.body.id;
   // TODO 4: Use axios to PATCH the data from req.body to the secrets api servers.
+  const searchId = req.body.id;
+  const secret = req.body.secret;
+  const score = req.body.score;
+
+  try {
+    const result = await axios.patch(
+      API_URL + "/secrets/" + searchId,
+      {
+        secret: secret,
+        score: score
+      },
+      config
+    );
+
+    res.render("index.ejs", { content: JSON.stringify(result.data.newData) });
+  } catch (error) {
+    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+  }
 });
 
 app.post("/delete-secret", async (req, res) => {
