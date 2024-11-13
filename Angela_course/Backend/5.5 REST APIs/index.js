@@ -39,12 +39,7 @@ app.post("/post-secret", async (req, res) => {
   const score = req.body.score;
 
   try {
-
-    const result = await axios.post(
-      API_URL + "/secrets/",
-     req.body,
-      config
-    );
+    const result = await axios.post(API_URL + "/secrets/", req.body, config);
     console.log(req.body);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
@@ -61,10 +56,7 @@ app.post("/put-secret", async (req, res) => {
   try {
     const result = await axios.put(
       API_URL + "/secrets/" + searchId,
-      {
-        secret: secret,
-        score: score,
-      },
+      req.body,
       config
     );
 
@@ -83,10 +75,7 @@ app.post("/patch-secret", async (req, res) => {
   try {
     const result = await axios.patch(
       API_URL + "/secrets/" + searchId,
-      {
-        secret: secret,
-        score: score,
-      },
+      req.body,
       config
     );
 
@@ -101,10 +90,7 @@ app.post("/delete-secret", async (req, res) => {
   // TODO 5: Use axios to DELET E the item with searchId from the secrets api servers.
 
   try {
-    const result = await axios.delete(
-      API_URL + "/secrets/" + searchId,
-      config
-    );
+    const result = await axios.delete(API_URL + "/secrets/" + searchId, config);
 
     res.render("index.ejs", { content: "Deleted" });
   } catch (error) {
