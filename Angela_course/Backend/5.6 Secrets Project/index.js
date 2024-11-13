@@ -12,15 +12,30 @@
 
 import axios from "axios";
 import express from "express";
+// import bodyParser from "body-parser"
 
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
-  res.render("index.ejs", {
-    secret: "dd",
-    user: "ddddd",
-  });
+app.use(express.static("public"));
+// app.use(bodyParser.urlencoded({extended:true}))
+
+app.get("/", async (req, res) => {
+  try {
+    const result = await axios.get("https://secrets-api.appbrewery.com/random");
+    // console.log(result.data);
+    const username = result.data.username
+    const secret = result.data.secret
+    // console.log(username)
+
+    res.render("index.ejs", {
+      secret: secret,
+      user: username,
+    });
+  } catch (error){
+    res.render("index.ejs", {error: error.message})
+
+  }
 });
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
