@@ -39,15 +39,13 @@ app.post("/post-secret", async (req, res) => {
   const score = req.body.score;
 
   try {
+
     const result = await axios.post(
       API_URL + "/secrets/",
-      {
-        secret: secret,
-        score: score,
-      },
+     req.body,
       config
     );
-    console.log(result);
+    console.log(req.body);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
     res.render("index.ejs", { content: JSON.stringify(error.response.data) });
