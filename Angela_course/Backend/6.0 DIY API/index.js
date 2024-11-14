@@ -8,7 +8,11 @@ const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
-
+app.get("/random", async(req, res)=> {
+  const randIdx = Math.floor(Math.random() *  jokes.length)
+  const result = jokes[randIdx]
+  res.json(result)
+})
 //2. GET a specific joke
 
 //3. GET a jokes by filtering on the joke type
