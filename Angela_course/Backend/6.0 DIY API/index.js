@@ -31,7 +31,7 @@ app.get("/filter",  (req, res)=>{
   const type =  req.query.type
   console.log(type)
   const findByFilter = (jokes, type )=> {
-    return jokes.find(joke => joke.jokeType ===type);
+    return jokes.filter(joke => joke.jokeType ===type);
   }
   res.json(
     findByFilter(jokes, type)
