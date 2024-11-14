@@ -27,6 +27,19 @@ app.get("/jokes/:id",  (req, res)=>{
 })
 
 //3. GET a jokes by filtering on the joke type
+app.get("/filter",  (req, res)=>{
+  const type =  req.query.type
+  console.log(type)
+  const findByFilter = (jokes, type )=> {
+    return jokes.find(joke => joke.jokeType ===type);
+  }
+  res.json(
+    findByFilter(jokes, type)
+  )
+  // console.log(typeof(id))
+  // console.log(typeof(req.params.id)) 
+})
+
 
 //4. POST a new joke
 
