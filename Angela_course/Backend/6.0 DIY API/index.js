@@ -40,8 +40,9 @@ app.get("/filter", (req, res) => {
 app.post("/jokes", (req, res) => {
   const type = req.body.type;
   const text = req.body.text;
-  const idCreate = jokes[jokes.length - 1].id;
-  jokePush(idCreate, text,type)
+  const idCreate = jokes[jokes.length - 1].id + 1;
+  jokePush(idCreate, text, type);
+  res.status(201).json({ message: "Joke created successfully", id: idCreate });
 });
 
 //5. PUT a joke
