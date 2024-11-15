@@ -8,40 +8,41 @@ const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
-app.get("/random", (req, res)=> {
-  const randIdx = Math.floor(Math.random() *  jokes.length)
-  const result = jokes[randIdx]
-  res.json(result)
-})
+app.get("/random", (req, res) => {
+  const randIdx = Math.floor(Math.random() * jokes.length);
+  const result = jokes[randIdx];
+  res.json(result);
+});
 //2. GET a specific joke
-app.get("/jokes/:id",  (req, res)=>{
-  const id =  parseInt(req.params.id)
-  const findByFilter = (jokes, id )=> {
-    return jokes.find(joke => joke.id ===id);
-  }
-  res.json(
-    findByFilter(jokes, id)
-  )
+app.get("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const findByFilter = (jokes, id) => {
+    return jokes.find((joke) => joke.id === id);
+  };
+  res.json(findByFilter(jokes, id));
   // console.log(typeof(id))
-  // console.log(typeof(req.params.id)) 
-})
+  // console.log(typeof(req.params.id))
+});
 
 //3. GET a jokes by filtering on the joke type
-app.get("/filter",  (req, res)=>{
-  const type =  req.query.type
-  console.log(type)
-  const findByFilter = (jokes, type )=> {
-    return jokes.filter(joke => joke.jokeType ===type);
-  }
-  res.json(
-    findByFilter(jokes, type)
-  )
+app.get("/filter", (req, res) => {
+  const type = req.query.type;
+  console.log(type);
+  const findByFilter = (jokes, type) => {
+    return jokes.filter((joke) => joke.jokeType === type);
+  };
+  res.json(findByFilter(jokes, type));
   // console.log(typeof(id))
-  // console.log(typeof(req.params.id)) 
-})
-
+  // console.log(typeof(req.params.id))
+});
 
 //4. POST a new joke
+app.post("/jokes", (req, res) => {
+  const type = req.body.type;
+  const text = req.body.text;
+  const idCreate = jokes[jokes.length - 1].id;
+  jokePush(idCreate, text,type)
+});
 
 //5. PUT a joke
 
@@ -54,6 +55,14 @@ app.get("/filter",  (req, res)=>{
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
 });
+
+function jokePush(idCreate, text, type) {
+  jokes.push({
+    id: idCreate,
+    jokeText: text,
+    jokeType: type,
+  });
+}
 
 var jokes = [
   {
