@@ -48,13 +48,12 @@ app.post("/jokes", (req, res) => {
 //5. PUT a joke
 app.put("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const newJoke = {
-    jokeText: req.body.text,
-    jokeType: req.body.type,
-  };
   jokes = jokes.map((joke) => {
     if (joke.id === id) {
-      return { ...joke, ...newJoke };
+      return { ...joke, 
+        jokeType: req.body.type !== undefined ? req.body.type : joke.jokeType, //
+        jokeText: req.body.text !== undefined ? req.body.text : joke.jokeText //
+       };
     }
     return joke;
   });
