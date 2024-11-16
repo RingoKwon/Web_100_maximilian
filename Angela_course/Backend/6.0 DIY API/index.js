@@ -48,12 +48,18 @@ app.post("/jokes", (req, res) => {
 //5. PUT a joke
 app.put("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
+  const newJoke = {
+    jokeText: req.body.text,
+    jokeType: req.body.type,
+  };
   jokes = jokes.map((joke) => {
     if (joke.id === id) {
-      return { ...joke, jokeText: req.body.text };
+      return { ...joke, ...newJoke };
     }
     return joke;
   });
+  console.log(jokes[id - 1]);
+
   res.json({ message: "Joke updated successfully" });
 });
 
