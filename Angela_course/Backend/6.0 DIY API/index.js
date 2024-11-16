@@ -46,6 +46,11 @@ app.post("/jokes", (req, res) => {
 });
 
 //5. PUT a joke
+app.put("/jokes/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(jokes[id].jokeText = "ee");
+  // ... additional code to update the joke ...
+});
 
 //6. PATCH a joke
 
