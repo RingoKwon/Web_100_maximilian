@@ -48,21 +48,33 @@ app.post("/jokes", (req, res) => {
 //5. PUT a joke
 app.put("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  jokes = jokes.map((joke) => {
-    if (joke.id === id) {
-      return { ...joke, 
-        jokeType: req.body.type !== undefined ? req.body.type : joke.jokeType, //
-        jokeText: req.body.text !== undefined ? req.body.text : joke.jokeText //
-       };
-    }
-    return joke;
-  });
-  console.log(jokes[id - 1]);
-
-  res.json({ message: "Joke updated successfully" });
+  const replacement = {
+    id: id,
+    jokeType: req.body.type,
+    jokeText: req.body.text,
+  };
+  const serchIdx = jokes.findIndex((joke) => joke.id === id);
+  jokes[serchIdx] = replacement;
+  res.json(replacement);
 });
 
 //6. PATCH a joke
+app.patch("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  jokes = jokes.map((joke) => {
+    if (joke.id === id) {
+      return {
+        ...joke,
+        jokeType: req.body.type !== undefined ? req.body.type : joke.jokeType, //
+        jokeText: req.body.text !== undefined ? req.body.text : joke.jokeText, //
+      };
+    }
+    return joke;
+  });
+  // console.log(jokes[id - 1]);
+
+  res.json({ message: "Joke updated successfully" });
+});
 
 //7. DELETE Specific joke
 
