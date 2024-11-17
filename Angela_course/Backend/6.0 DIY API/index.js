@@ -61,19 +61,22 @@ app.put("/jokes/:id", (req, res) => {
 //6. PATCH a joke
 app.patch("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  jokes = jokes.map((joke) => {
-    if (joke.id === id) {
-      return {
-        ...joke,
-        jokeType: req.body.type !== undefined ? req.body.type : joke.jokeType, //
-        jokeText: req.body.text !== undefined ? req.body.text : joke.jokeText, //
-      };
-    }
-    return joke;
-  });
-  // console.log(jokes[id - 1]);
+  const existingJoke = jokes.find((joke) => joke.id === id);
+  
+  // Check if the joke exists
+  if (!existingJoke) {
+    return res.status(404).json({ message: "Joke not found" });
+  }
 
-  res.json({ message: "Joke updated successfully" });
+  const newJoke = {
+    id: id, 
+    jokeText: req.body.text !== undefined ? req.body.text : existingJoke.jokeText,
+    jokeType: req.body.type !== undefined ? req.body.type : existingJoke.jokeType
+  };
+
+  console.log(newJoke);
+
+  res.json({ message: "Joke updated successfully", joke: newJoke });
 });
 
 //7. DELETE Specific joke
