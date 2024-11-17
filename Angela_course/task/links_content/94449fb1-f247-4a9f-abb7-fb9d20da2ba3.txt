@@ -1,0 +1,58 @@
+
+
+
+
+
+Viewing Transaction Status | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-in using Ledger Hardware WalletPeg-in using Leather Software WalletViewing Peg-in Transaction StatusPeg-in using Trezor Hardware WalletPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.3Peg-inViewing Peg-in Transaction StatusTime to read: 1 minOn this pageViewing Transaction StatusThe transaction status shows the status of transactions performed using the PowPeg App.
+There are two ways to view the transaction status.
+
+Using the Transaction status page on the PowPeg App.
+View a transaction using Blockcypher Explorer
+
+Using the transaction status page​
+To view a transaction status using the PowPeg App, we will do the following steps;
+Step 1: Go to the homepage
+Visit: 2 way peg.
+Click on transaction status.
+
+Step 2: Enter Transaction ID
+Copy the transaction ID derived in Step 12: Performing a Pegin transaction with Ledger, paste into the field as shown below, click on enter or click on the search icon or click on Enter.
+
+Step 3: View transaction status
+This shows what stage the transaction is in, the transaction performed was a peg-in transaction (BTC to RBTC), in the image below, you will see whether funds have moved from the Bitcoin network to the Rootstock network, and also when the funds have been successfully delivered to an Rootstock address.
+Click on the refresh button by scrolling down on the page below to view the updated status.
+
+Step 4: View transaction summary
+Here, you can see the following information:
+Bitcoin Side:
+
+Sender Address: The address used to send BTC
+Transactino ID: Bitcoin Transaction hash
+Fee: Bitcoin Network fee
+You will send: The amount send + fee to the Bitcoin Network
+
+Rootstock Side
+
+Recipient Address: The address when you will receive the funds
+Transaction ID: Rootstock Transaction hassh
+Fee: Rootstock Network fee
+You will receive: The amount that you will receive in Recipient Address
+
+Error
+In case an error occurs with this transaction, the amount will be sent back to the refund Bitcoin address.
+See the glossary section for in-depth definition and explanation of these terms.
+
+Using Block Explorer​
+To view transactions status using Block Explorer, you can click on the open windonw icon, or copy transaction ID and paste in your prefered block explorer.Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.3.2Peg-in using Leather Software WalletNext6.1.3.4Peg-in using Trezor Hardware WalletLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageUsing the transaction status pageUsing Block ExplorerMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

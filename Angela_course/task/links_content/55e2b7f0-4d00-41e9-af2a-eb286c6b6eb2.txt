@@ -1,0 +1,18 @@
+
+
+
+
+
+Node Setup | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshootingNode SetupNode SetupHardware RequirementsMinimum hardware requirements for Rootstock.Node Installation3 itemsConfigure the node7 itemsNode Runners4 itemsReproducible BuildA deterministic build process used to build Rootstock node JAR file. Provides a way to be reasonable sure that the JAR is built from GitHub RSKj repository. Makes sure that the same tested dependencies are used and statically built into the executable.Security ChainAll the different ways that you can verify RSKj: Release signing key, fingerprint of the public key, SHA256SUMS.asc, binary dependencies, secure environment scriptPrevious1.0OverviewNext2.1Hardware RequirementsMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,18 @@
+
+
+
+
+
+PowPeg App | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0GuidesPowPeg AppPowPeg AppThe PowPeg App fka 2 way peg app converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique PowPeg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.OverviewWelcome to the overview section of the PowPeg App documentation.PrerequisitesWelcome to the overview section of the PowPeg App documentation.Peg-in4 itemsPeg-out7 itemsAdvanced Operations4 itemsFAQsFrequently asked questions about the PowPeg App.GlossaryWelcome to the glossary section for the PowPeg App documentation.Previous6.0GuidesNext6.1.1OverviewMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,22 @@
+
+
+
+
+
+Management API Methods | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCRPC MethodsTransport ProtocolPersonal ModuleConfiguration LimitsManagement API MethodsPublic NodesMaintenanceTroubleshooting4.0JSON RPCManagement API MethodsTime to read: 1 minOn this pageManagement API MethodsMethodSupportedCommentsadmin_addPeerNOadmin_datadirNOadmin_nodeInfoNOadmin_peersNOadmin_setSolcNOadmin_startRPCNOadmin_startWSNOadmin_stopRPCNOadmin_stopWSNOdebug_backtraceAtNOdebug_blockProfileNOdebug_cpuProfileNOdebug_dumpBlockNOdebug_getBlockRlpNOdebug_goTraceNOdebug_memStatsNOdebug_seedHashNOdebug_setHeadNOdebug_setBlockProfileRateNOdebug_stacksNOdebug_startCPUProfileNOdebug_startGoTraceNOdebug_stopGoTraceNOdebug_traceBlockNOdebug_traceBlockByNumberNOdebug_traceBlockByHashNOdebug_traceBlockFromFileNOdebug_traceTransactionYESdebug_vmoduleNOdebug_writeBlockProfileNOdebug_writeMemProfileNOminer_setExtraNOminer_setGasPriceNOminer_startNOminer_stopNOminer_setEtherBaseNOpersonal_importRawKeyYESpersonal_listAccountsYESpersonal_lockAccountYESpersonal_newAccountYESpersonal_unlockAccountYESpersonal_sendTransactionYESpersonal_signNOpersonal_ecRecoverNOtrace_blockPARTIALLYOption "pending" not supported. It also supports block hash as parameter.trace_transactionYEStxpool_contentYEStxpool_inspectYEStxpool_statusYES
+RPC PUB SUB methods​
+MethodSupportedCommentseth_subscribePARTIALLYOnly options "newHeads" and "logs" are supported.eth_unsubscribeYES
+RPC SPV methods​
+MethodSupportedCommentsrsk_getRawBlockHeaderByNumberYESObtains the RLP encoded block header used for SPV, if this is hashed using Keccak256 it gives the block hash. This function takes the block number (in hexa) or the string "latest", "pending", "genesis".rsk_getRawBlockHeaderByHashYESObtains the RLP encoded block header used for SPV, if this is hashed using Keccak256 it gives the block hash. This function takes the block hash as parameter.rsk_getRawTransactionReceiptByHashYESObtains the RLP encoded Transaction Receipt, if this is hashed using Keccak256 it gives the transaction receipt hash. This function takes the transaction hash as parameter.rsk_getTransactionReceiptNodesByHashYESObtains an array of nodes of the transactions receipt Trie. This is used to hash up to the transaction receipt root. This function takes the block hash and transaction hash as parameters.Tags:rskrskjnoderpcrpc apinode operatorsrootstockPrevious4.4Configuration LimitsNext5.0Public NodesLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageRPC PUB SUB methodsRPC SPV methodsMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

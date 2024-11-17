@@ -1,0 +1,18 @@
+
+
+
+
+
+Port a dApp from other Chains to Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockPort an Ethereum dApp to RootstockGuidesHackathonsFAQsPort to RootstockTime to read: 1 minPort a dApp from other Chains to RootstockAllFrom EthereumEthereumPort an Ethereum dApp to RootstockPorting an Ethereum decentralized application (dApp) to Rootstock presents an exciting opportunity to leverage the benefits of the Rootstock network, which is a smart contract platform secured by the Bitcoin network.Tags:rskrootstockresourcesbeginnerquick startsadvancedport to rootstocktutorialsPrevious4.6Hyperlane BridgeNext5.1Port an Ethereum dApp to RootstockLast updated on Nov 7, 2024 by Owanate AmachreeMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

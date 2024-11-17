@@ -1,0 +1,26 @@
+
+
+
+
+
+Common errors when using the PowPeg App | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outViewing a derived bitcoin addressPeg-out using Metamask and any hardware walletPeg-out using LedgerPegout using MetamaskTroubleshooting and Common ErrorsViewing Peg-out Transaction StatusPeg-out using TrezorAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.4Peg-outTroubleshooting and Common ErrorsTime to read: 1 minOn this pageCommon errors when using the PowPeg App
+You may encounter the following errors when trying out the application:
+Resources​
+
+PowPeg App frontend repo
+PowPeg App backend repo
+Rootstock Testnet Faucet
+Design architecture
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.4.4Pegout using MetamaskNext6.1.4.6Viewing Peg-out Transaction StatusLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

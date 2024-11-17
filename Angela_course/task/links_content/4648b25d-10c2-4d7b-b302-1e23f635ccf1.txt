@@ -1,0 +1,18 @@
+
+
+
+
+
+Merged Mining | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningImplementation GuideConfigure Node for MiningReferenceAutominerRemascJSON RPCPublic NodesMaintenanceTroubleshootingMerged MiningMerged MiningImplementation GuideHow to merge mine Rootstock using Bitcoin mining pool software.Configure Node for MiningSetting your own config preferences, when using the Java command, Ubuntu, Azure, AWS, or DockerReferenceHow Rootstock leverages the Bitcoin network's consensus mechanism for its own secruity, and adds additional features to prevent double spendingAutominerLearn how to run the Rootstock node with autominer - similar to Ganache default configRemascReward Manager Smart Contract (REMASC) is a pre-compiled smart-contract that is executed on every block and has the responsibility to fairly distribute rewards collected from transaction fees into several participants of the network. However the distribution of rewards of a block is only performed once the block reaches a certain maturity. In other words, the rewards are paid only after a  fixed number of blocks have confirmed a block. With the exception of the first blocks in the blockchain after genesis, every time a block is added to the blockchain, another previous block reaches maturity and its rewards are paid.Previous2.6Security ChainNext3.1Implementation GuideMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,18 @@
+
+
+
+
+
+Configure the node | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationConfigure the nodeSetting Config PreferencesCLIReferenceSwitch networkConfigure VerbosityPeer Scoring SystemTransaction Rate LimiterNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node SetupConfigure the nodeConfigure the nodeSetting Config PreferencesSetting your own config preferences, when using the Java command, Ubuntu, Azure, AWS, or Docker.CLICommand Line Interface for Rootstock (RSK)ReferenceConfiguration reference for RSKjSwitch networkHow to switch your RSK node between the Mainnet, Testnet, and RegTest networksConfigure VerbosityConfigure RSKj for desired log verbosity, finding log files, and using logback.Peer Scoring System The peer scoring system protects the RSKj node's resources from abusive or malicious peersTransaction Rate LimiterTransaction rate limiting on the Rootstock network. The features, their importance, how to use and configure them.Previous2.2.3Setup node on UbuntuNext2.3.1Setting Config PreferencesMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

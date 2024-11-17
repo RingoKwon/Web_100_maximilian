@@ -1,0 +1,52 @@
+
+
+
+
+
+Hardhat on Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersExplorersDev EnvironmentsHardhatRemixGelatoFoundryAttestationsNo CodeGeneral Tools9.0Dev EnvironmentsHardhatTime to read: 1 minOn this pageHardhat on RootstockHardhat is an Ethereum development environment for developers. It's primarily used in the development of smart contracts for the Rootstock and EVM-compatible chains.
+Key features of Hardhat​
+
+
+Local Ethereum Network: It provides a local blockchain environment, allowing developers to deploy contracts, run tests, and debug their code.
+
+
+Automated Testing: Hardhat facilitates automated testing of smart contracts, which is crucial for ensuring their reliability and security.
+
+
+Debugging: It includes a robust debugging tool that helps developers identify and fix issues in their smart contracts.
+
+
+Hardhat Runtime Environment (HRE): This is injected into the project's scripts and provides access to Hardhat's functionality and plugins.
+
+
+Extensible Through Plugins: Developers can extend Hardhat's capabilities through a wide range of plugins.
+
+
+Network Management: It allows for seamless interaction with public and private networks, making deployment processes efficient.
+
+
+Ethers.js and Waffle Integration: These integrations provide a set of utilities for writing and testing smart contracts.
+
+
+Installation​
+To install Hardhat, run the following command:
+npm install --save-dev hardhat
+Related Links​
+
+Hardhat Starter dApp
+Getting Started with Hardhat
+Getting Started with Foundry
+Developer Tools
+Tags:hardhatquick startdeveloper toolsrskrootstockethereumdAppssmart contractsPrevious9.0Dev EnvironmentsNext9.2RemixLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageKey features of HardhatInstallationRelated LinksMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

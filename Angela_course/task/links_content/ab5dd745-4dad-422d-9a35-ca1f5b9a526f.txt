@@ -1,0 +1,27 @@
+
+
+
+
+
+Contribute to Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeHacktivator ProgramWriting ContestBug Bounty ProgramTutorialsPort to RootstockGuidesHackathonsFAQsContributeTime to read: 1 minOn this pageContribute to RootstockAre you passionate about web3, bitcoin and the Blockchain? Do you have a passion for Open Source and Web3? Do you enjoy writing, coding, bounty hunting, solving real-world problems, and eager to contribute to the future of Bitcoin and Decentralized Finance? Join the Rootstock Discord Community and start making contributions!
+Who Is It For?​
+Whether you're a seasoned developer, creative writer, researcher, bug bounty hunter, or simply enthusiastic about blockchain, the program welcomes contributors from all backgrounds.
+Getting Started​
+From writing, bug bounties and open-source projects, there are various ways to participate and earn valuable incentives.
+Hacktivator ProgramThe Rootstock Hacktivator Program allows developers to evolve to Rootstock by contributing code or creating educational content. You get to support the platform at your own pace, and every eligible contribution will be rewarded based on its impact and value.
+
+Writing ContestsContribute articles, tutorials and guides about Rootstock, Bitcoin, etc.
+
+Bug Bounty ProgramRootstockLabs has created the bug bounty program to reward researchers that submit valid vulnerabilities to improve the RootstockLabs platforms security.Tags:rootstockrskcontributeopen sourcePrevious2.0Courses on RootstockNext3.1Hacktivator ProgramLast updated on Nov 8, 2024 by Owanate AmachreeOn this pageWho Is It For?Getting StartedMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

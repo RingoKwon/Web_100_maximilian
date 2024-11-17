@@ -1,0 +1,20 @@
+
+
+
+
+
+Node Operators Overview | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCPublic NodesMaintenanceTroubleshootingOverviewTime to read: 1 minOn this pageNode Operators OverviewThis section guides node operators performing merged mining operations or developers looking to setup and run the Rootstock node (RSKj).
+Navigating Node Operators​
+ResourceDescriptionNode SetupSet up requirements, installation, configuration and run the Rootstock nodes.JSON RPCThe JSON-RPC methods supported by Rootstock nodes.Merged MiningHow to merge mine Rootstock using Bitcoin mining pool software.Public NodesRootstock Nodes: Public nodes (Mainnet, Testnet).MaintenanceHow to upgrade and update the Rootstock nodes.TroubleshootingLearn how to solve some known or frequently encountered issues when setting up the node.Tags:rskrootstockrskjnodedevelopersmerged miningNext2.0Node SetupLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageNavigating Node OperatorsMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

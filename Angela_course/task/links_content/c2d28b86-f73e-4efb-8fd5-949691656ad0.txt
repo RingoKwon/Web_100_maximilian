@@ -1,0 +1,76 @@
+
+
+
+
+
+Foundry on Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersExplorersDev EnvironmentsHardhatRemixGelatoFoundryAttestationsNo CodeGeneral Tools9.0Dev EnvironmentsFoundryTime to read: 1 minOn this pageFoundry on RootstockFoundry is a smart contract development toolchain, and user-friendly development environment for writing and testing smart contracts in Solidity. It manages dependencies, compiles, run tests, deploy contracts and allows for interaction with EVM-compatible chains using a command-line tool called Forge.
+Why use Foundry?​
+Forge is ideal for advanced smart contract analysis, auditing, and for fast execution of smart contract tests.
+hardhat-foundry pluginUse the hardhat-foundry plugin to have your Foundry project work alongside Hardhat.
+Here are some reason why you may prefer Foundry:
+
+
+Local Networks:
+It provides a local blockchain environment using the anvil tool, allowing developers to deploy contracts, run tests, and debug code. It can also be used to fork other EVM compatible networks.
+
+
+Advanced Testing:
+Forge comes with a number of advanced testing methods including:
+
+Fuzz testing
+Invariant testing
+Differential testing
+Symbolic Execution
+Mutation Testing
+
+
+
+Advanced Debugging:
+Forge allows for advanced debugging using an interactive debugger.
+
+
+The debugger terminal is divided into four quadrants:
+
+Quadrant 1
+
+The opcodes in the debugging session, with the current opcode highlighted. Additionally, the address of the current account, the program counter and the accumulated gas usage is also displayed.
+
+
+Quadrant 2
+
+The current stack, as well as the size of the stack
+
+
+Quadrant 3
+
+The source view.
+
+
+Quadrant 4
+
+The current memory of the EVM.
+
+
+
+Resources​
+
+Getting Started with Foundry
+Getting Started with Hardhat
+Foundry Project Layout
+RPC Calls Using Cast
+Foundry Configurations
+Solidity Scripting
+Deploy Smart Contracts To Deterministic Addresses
+Tags:foundryquick startdeveloper toolsrskrootstockethereumdAppssmart contractsPrevious9.3GelatoNext10.0AttestationsLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageWhy use Foundry?ResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

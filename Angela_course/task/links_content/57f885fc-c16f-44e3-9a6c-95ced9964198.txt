@@ -1,0 +1,79 @@
+
+
+
+
+
+Overview | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg AppOverviewTime to read: 1 minOn this pageOverviewIn this section, we are going to learn about the PowPeg App, how it works, its features, and the benefits of using the application.
+Notice: Name Change to PowPeg AppEffective September 03rd, 2024, the 2 Way Peg App has been officially renamed to PowPeg App, this name change reflects Rootstock's commitment to providing a more intuitive and engaging experience for users.Note that the previous address still works, redirecting users to the new one.The app is available at https://powpeg.rootstock.io/If you have any questions or concerns, please don't hesitate to contact support.
+
+To get started, see the prerequisites section.
+
+The PowPeg App converts BTC to RBTC and vice versa. It is secured by the PowPeg protocol, which is a unique protocol that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus.
+It is a web application that fosters the interaction between the bitcoin blockchain and the Rootstock network for easier exchange of BTC and RBTC. It also provides a way to visualize the status of transactions, communicate with a user wallet (both hardware wallets and software wallets), while also providing the highest possible level of security for transactions.
+How it Works​
+The PowPeg App uses a REST API and a PowPeg api as the backend, this API uses a daemon process, which is responsible for listening on blockchain transactions to update the state of peg-ins and in the future, the state of peg-outs, these state changes (tx hash, date change, last status) are stored in a mongodb database.
+InfoThe PowPeg App is available on both Mainnet and Testnet.
+The source code is available on github, and open source:
+
+Front end
+Back end
+
+Features​
+The PowPeg App, has two primary features, they are:
+
+
+Peg-in: A conversion from BTC to RBTC. See Glossary page for more explanation.
+
+Note: The peg-in process is final and cannot be reverted.
+Native pegin transaction has 17 hours estimated time to completion.
+
+
+
+Peg-out: A conversion from RBTC to BTC. This current version of the PowPeg. See pegout for more explanation.
+
+Native pegin transaction has 34 hours estimated time to completion.
+
+
+
+Why use the PowPeg App?​
+The PowPeg App has lots of benefits, these include:
+
+Simplified transactions
+
+The PowPeg App (peg-in and peg-out) are its nature is a complex process and this app makes it simpler. Using the PowPeg App enables you to choose where to receive the converted BTC / RBTC, which is also possible without it, but with an even higher level of complexity than a legacy peg-in and peg-out.
+
+Visualization of transactions
+
+Enables the visualization of the status of transactions on the Rootstock network
+
+Enables communication with a user wallet (hardware and software)
+
+The PowPeg App communicates directly with the following services:
+
+Trezor: Directly via USB
+Ledger: Directly via USB and integrated with the manufacturer's application
+Metamask: Through the rLogin application. Learn more about the rLogin application
+
+
+Secure transactions
+
+All transactions need to be confirmed via the device used by the customer, whether a hardware or software wallet, all transaction information and the appropriate signatures are generated through integration with the wallets.
+
+Next​
+
+Convert BTC to RBTC using the PowPeg App.
+Convert RBTC to BTC using the PowPeg App.
+View Advanced Operations
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1PowPeg AppNext6.1.2PrerequisitesLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHow it WorksFeaturesWhy use the PowPeg App?NextMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

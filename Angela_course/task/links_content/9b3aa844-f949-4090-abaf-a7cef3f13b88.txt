@@ -1,0 +1,109 @@
+
+
+
+
+
+Get Started with The Graph | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersEnvioThe GraphCovalentGoldskyExplorersDev EnvironmentsAttestationsNo CodeGeneral Tools7.0Data IndexersThe GraphTime to read: 1 minOn this pageGet Started with The GraphGetting historical data on smart contracts can be challenging when building dApps. The Graph provides an easy way to query smart contracts data through APIs known as subgraphs. Its infrastructure relies on a decentralized network of indexers, enabling dApps to achieve true decentralization.
+These subgraphs only take a few minutes to set up and get running and is supported on: .
+To get started, follow these steps below:
+
+Initialize a subgraph project
+Deploy & Publish
+Query from a dApp
+
+Querying is a way to access
+
+
+Publish
+
+
+Pricing: All developers receive 100K free queries per month on the decentralized network. After these free queries, you only pay based on usage at $4 for every 100K queries.
+
+Getting Started​
+Initialize a subgraph project​
+To initialize a Subgraph project, we need to create a subgraph on Subgraph Studio⁠.
+Go to the Subgraph Studio and connect your wallet. Once wallet is connected, begin by clicking “Create a Subgraph”.
+InfoRemember to choose a clear and descriptive name for the subgraph since it can’t be edited later.It is recommended to use a Title Case: “Subgraph Name Chain Name.”
+
+On the subgraph’s page, all the CLI commands needed will be visible on the right side of the page:
+
+Install the Graph CLI⁠​
+Run the following command locally:
+npm install -g @graphprotocol/graph-cli
+
+You must have at least v0.85.0 to deploy subgraphs on Rootstock mainnet and testnet.
+
+Initialize a Subgraph⁠​
+This can be copied directly from your subgraph page to include a specific subgraph slug:
+graph init --studio <SUBGRAPH_SLUG>
+You’ll be prompted to provide some info on your subgraph like this:
+
+Once contract is verified on the block explorer, the CLI will automatically obtain the ABI and set up the subgraph. The default settings will generate an entity for each event.
+2. Deploy & Publish​
+Deploy to Subgraph Studio⁠​
+Run the commands below:
+$ graph codegen$ graph build
+To authenticate and deploy your subgraph, run the commands below. You can copy these commands directly from your subgraph’s page in Studio to include a specific deploy key and subgraph slug:
+$ graph auth --studio <DEPLOY_KEY>$ graph deploy --studio <SUBGRAPH_SLUG>
+You will be asked to provide a version label (e.g., v0.0.1). You can use any format that works for you.
+Test Subgraph⁠​
+You can test your subgraph by making a sample query in the playground section. The Details tab will show you an API endpoint. You can use that endpoint to test from your dApp.
+
+Publish Subgraph to The Graph’s Decentralized Network​
+Once your subgraph is ready to be put into production, you can publish it to the decentralized network. On your subgraph’s page in Subgraph Studio, click on the Publish button:
+
+Before you can query your subgraph, Indexers need to begin serving queries on it. In order to streamline this process, you can curate your own subgraph using GRT.
+
+When publishing, you’ll see the option to curate your subgraph. As of May 2024, it is recommended that you curate your own subgraph with at least 3,000 GRT to ensure that it is indexed and available for querying as soon as possible.
+
+
+InfoThe Graph's smart contracts are all on Arbitrum One, even though your subgraph is indexing data from Rootstock or any other supported chain.
+3. Query Subgraph​
+Congratulations! You can now query your subgraph on the decentralized network!
+For any subgraph on the decentralized network, you can start querying it by passing a GraphQL query into the subgraph’s query URL which can be found at the top of its Explorer page.
+Here’s an example from the CryptoPunks Ethereum subgraph by Messari:
+
+The query URL for this subgraph is:
+
+
+https://gateway-arbitrum.network.thegraph.com/api/
+
+
+[api-key]: /subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK
+
+
+Now, you need to fill in your own API Key to start sending GraphQL queries to this endpoint.
+Getting your own API Key​
+
+In the Subgraph Studio, the “API Keys” menu can be accessed from the top of the page. Here, you can create API Keys.
+Appendix​
+Sample Query​
+This query below shows the most expensive CryptoPunks sold.
+{  trades(orderBy: priceETH, orderDirection: desc) {    priceETH    tokenId  }}
+Passing this into the query URL returns the result below:
+{  "data": {    "trades": [      {        "priceETH": "124457.067524886018255505",        "tokenId": "9998"      },      {        "priceETH": "8000",        "tokenId": "5822"      },//      ...
+
+💡 Trivia: Looking at the top sales on CryptoPunks website it looks like the top sale is Punk #5822, not #9998. Why? Because they censor the flash-loan sale that happened.
+
+Sample code​
+Here's a sample code to use within your subgraph:
+const axios = require('axios');const graphqlQuery = `{  trades(orderBy: priceETH, orderDirection: desc) {    priceETH    tokenId  }}`;const queryUrl = 'https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/HdVdERFUe8h61vm2fDyycHgxjsde5PbB832NHgJfZNqK'const graphQLRequest = {  method: 'post',  url: queryUrl,  data: {    query: graphqlQuery,  },};// Send the GraphQL queryaxios(graphQLRequest)  .then((response) => {    // Handle the response here    const data = response.data.data    console.log(data)  })  .catch((error) => {    // Handle any errors    console.error(error);  });
+Additional resources​
+
+To explore all the ways you can optimize & customize your subgraph for better performance, read more about creating a subgraph.
+Learn more about querying data from your subgraph.
+Subgraph Studio
+Getting GRT
+Tags:TheGraphindexersdatasubgraphsdAppssmart contractsdevelopersdeveloper toolsget-startedhow-toPrevious7.1EnvioNext7.3CovalentLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageGetting StartedInitialize a subgraph projectInstall the Graph CLI⁠Initialize a Subgraph⁠2. Deploy & PublishDeploy to Subgraph Studio⁠Test Subgraph⁠Publish Subgraph to The Graph’s Decentralized Network3. Query SubgraphGetting your own API KeyAppendixSample QuerySample codeAdditional resourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

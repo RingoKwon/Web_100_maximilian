@@ -1,0 +1,149 @@
+
+
+
+
+
+Prerequisites | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg AppPrerequisitesTime to read: 1 minOn this pagePrerequisitesInstall Apps​
+Using the PowPeg AppIn this guide, we will use the PowPeg App - Testnet for learning purposes.
+Note that for transactions using real tokens, use the PowPeg App - Mainnet.
+
+The Bitcoin testnet app does not show on Ledger live manager by default. To be able to see the BTC Testnet app you need to enable the developer mode in Ledger live.
+
+Enable Developer Mode for Bitcoin Testnet
+
+Connect your ledger hardware device and unlock it.
+Open Ledger live, click on Manager and open settings.
+Navigate to the experimental features menu and enable developer mode. This will show developer and testnet apps in the manager.
+
+
+Go to Ledger live manager and search for Bitcoin testnet app
+Click on install to install the Bitcoin Testnet application. To use the testnet app you also need the main Bitcoin app. So install both the apps to your device.
+
+
+
+
+Get Testnet address
+
+On your ledger device, you’ll find all the apps installed on your device. The Bitcoin app to be used on Mainnet, and Bitcoin Test app to be used on Testnet. To start using testnet, we need the testnet address, to get this address:
+
+Open the Bitcoin test app on your ledger device. You will see a “Bitcoin Testnet is ready” screen
+In the ledger live app, go to accounts tab, click on add account.
+
+
+Search testnet and select Bitcoin Testnet (BTC). Click on Continue
+
+
+Approve the Bitcoin Test app on your hardware wallet device
+On the next screen choose the address format (Native SegWit / SegWit).
+Click on Add Account:
+
+
+
+
+Note: See supported addresses for the types of addresses supported by the PowPeg App.
+
+
+You have successfully added the Bitcoin testnet app to your account.
+
+
+
+
+
+
+
+Get Funds​
+
+Get Testnet Tokens
+
+Go to the receive tab on Ledger live.
+
+
+Select Bitcoin testnet and click on continue.
+
+
+Copy BTC Testnet address
+
+
+Use the following faucet to receive testnet tokens:
+
+Open Coinfaucet
+Paste the address into the field and click on Get Bitcoins.
+
+
+
+
+Note: You need at least 0.005 BTC to perform a peg-in on Mainnet and Testnet. Likewise, you need at least 0.004 RBTC to perform a peg-out on Mainnet and Testnet.
+
+
+Get Mainnet Tokens
+
+See Get Crypto on Rootstock.
+
+
+
+InfoThe PowPeg App is available on both Mainnet and Testnet. Both applications follow the same process. For production purposes, use Mainnet, for testing and development purposes, use the Testnet.
+See glossary for explanation of these terms.
+
+Setup Requirements​
+To get started with the 2-way peg app, ensure you have the following:
+
+System Requirements
+
+A computer with at least Windows 8.1 (64-bit), macOS 10.10, or a Linux distribution, and an internet connection.
+
+
+Hardware Wallets
+
+Ledger Nano S / Ledger Nano X:
+
+Install Ledger Live to manage your device and install the Bitcoin and Bitcoin testnet apps. If you haven't, download it from here.
+For Ledger Nano S setup, see Set up your Ledger Nano S.
+For Ledger Nano X setup, see Set up your Ledger Nano X.
+
+
+Trezor Wallet:
+
+Follow the setup guide for Trezor hardware wallet.
+
+
+Liquality Software Wallet (Peg-out Requirements only):
+
+Setup the Liquality software wallet by visiting Liquality's website.
+
+
+Metamask Wallet (Peg-out Requirements only):
+
+For more details, see Metamask Wallet
+
+
+
+
+For Peg-out requirements, ensure you have either the Liquality or Metamask wallet installed in your browser. For more information, see Supported Browsers and Supported Wallets.
+
+
+
+Funds
+A minimum balance of 0.005 BTC for peg-in and 0.004 RBTC for peg-out processes.
+
+NoteThis guide primarily uses the Ledger Nano S hardware wallet for illustration, but all models of Ledger and Trezor wallets are compatible with the PowPeg App. If you do not have any of the listed hardware wallets, consider purchasing one from the official Ledger or Trezor websites.
+Resources​
+
+See the overview section to learn about the PowPeg App
+Convert BTC to RBTC using the PowPeg App
+PowPeg App frontend repo
+PowPeg App backend repo
+Rootstock Testnet Faucet
+Design architecture
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.1OverviewNext6.1.3Peg-inLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageInstall AppsGet FundsSetup RequirementsResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

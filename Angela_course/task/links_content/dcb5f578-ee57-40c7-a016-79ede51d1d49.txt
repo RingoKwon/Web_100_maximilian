@@ -1,0 +1,63 @@
+
+
+
+
+
+Transport Protocols | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCRPC MethodsTransport ProtocolPersonal ModuleConfiguration LimitsManagement API MethodsPublic NodesMaintenanceTroubleshooting4.0JSON RPCTransport ProtocolTime to read: 1 minOn this pageTransport ProtocolsThe following transport protocols are available on Rootstock:
+
+HTTP Transport Protocol
+Websockets Transport Protocol
+
+HTTP transport protocol​
+HTTP requests should be made:
+
+to the port number specified in the config for rpc.providers.web.http.port
+
+this is 4444 by default
+for public nodes, omit the port number
+
+
+to the "root" route (/)
+using the HTTP verb POST
+specifying a Content-Type header of application/json
+with a request body specified as stringified JSON
+
+For example, a curl command to a localhost Rootstock node
+would look similar to this:
+curl http://localhost:4444/ \ \  -X POST \  -H "Content-Type: application/json" \  --data '{"jsonrpc":"2.0","method":"RPC_METHOD_NAME","params":[RPC_REQUEST_PARAMETERS],"id":1}'
+WebSockets transport protocol​
+WebSockets connections should be established:
+
+to the port number specified in the config for rpc.providers.web.ws.port
+
+this is 4445 by default
+public nodes do not have the WebSockets transport protocol enabled
+
+
+to the WebSockets route (/websocket)
+
+Once connected:
+
+Send a request body specified as stringified JSON
+No "verb" or "headers" are necessary, as these are specific to the HTTP transport protocol
+
+For example, a wscat command to connect to a localhost Rootstock node
+would look similar to this:
+wscat -c ws://localhost:4445/websocket
+After the connection has been established using wscat,
+you may send multiple RPC requests within the same session.
+(Note that >  marks requests to be input,
+and that <  marks responses that will be printed.)
+    {"jsonrpc":"2.0","method":"RPC_METHOD_NAME","params":[RPC_REQUEST_PARAMETERS],"id":1}    {"jsonrpc":"2.0","id":1,"result":"RPC_RESPONSE"}    {"jsonrpc":"2.0","method":"RPC_METHOD_NAME","params":[RPC_REQUEST_PARAMETERS],"id":2}    {"jsonrpc":"2.0","id":2,"result":"RPC_RESPONSE"}Tags:rskrskjnoderpcrootstockPrevious4.1RPC MethodsNext4.3Personal ModuleLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHTTP transport protocolWebSockets transport protocolMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

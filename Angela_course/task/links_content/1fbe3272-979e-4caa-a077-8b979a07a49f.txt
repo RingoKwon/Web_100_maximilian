@@ -1,0 +1,22 @@
+
+
+
+
+
+Wallets compatible with Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsConfigure MetaMaskRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersExplorersDev EnvironmentsAttestationsNo CodeGeneral ToolsWalletsTime to read: 1 minOn this pageWallets compatible with RootstockThe following wallets support RBTC and RIF tokens.
+
+Compatibility Matrix​
+In the following matrix you can see the different features by wallet.
+WalletRootstock ChecksumRootstock dPathCustomizable dPathPlatformsNetworksBeexo✔✔✔Desktop, MobileRootstock (RBTC), BitcoinEdge✔✔❌Desktop, MobileRootstock (RBTC), BitcoinLedger✔✔❌MyEtherWallet✔✔✔Desktop, Android, IOSRBTCTrezor✔✔❌Metamask❌❌❌Browser, MobilePortis✔✔✔DesktopRootstock (RBTC), BitcoinRabby Wallet---Chrome, Desktop, MobileEnkrypt---ChromeRootstock (RBTC), BitcoinMyCrypto---DesktopRBTCTaHo---ChromeRootstock (RBTC)Frontier---Desktop, Mobile, ChromeRootstock (RBTC)Bitget---Chrome, MobileRBTCSafePal---Chrome, MobileRootstock (RBTC), BitcoinWallby---MobileRootstock (RBTC), BitcoinMathWallet❌❌❌Chrome, Desktop, MobileRootstock (RBTC), BitcoinBlock Wallet---ChromeRootstock (RBTC)MtPelerin Bridge---Desktop, MobileRootstock (RBTC), BitcoinGnosis Safe---Exodus---Chrome, Desktop, MobileRootstock (RBTC), BitcoinTags:rootstocktoolsrskwalletsPrevious1.0All ToolsNext2.1Configure MetaMaskLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageCompatibility MatrixMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

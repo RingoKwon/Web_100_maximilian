@@ -1,0 +1,37 @@
+
+
+
+
+
+Using Rootstock Public Nodes (Mainnet & Testnet) | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCPublic NodesMaintenanceTroubleshootingPublic NodesTime to read: 1 minOn this pageUsing Rootstock Public Nodes (Mainnet & Testnet)RootstockLabs currently provides two public nodes that you can use
+for testing purposes, and you will find that information below.
+Alternatively, follow the installation instructions,
+to run your own Rootstock node or use an alternative node provider.
+This is highly recommended for production environments,
+and in accordance with the bitcoiners' maxim: Don't trust. Verify.
+RPC Node ProvidersThe Rootstock public nodes do not expose WebSockets, they are HTTP only.
+To work around this, you may either run your own Rootstock node, or use the Rootstock RPC API or use a third-party node provider, such as Getblock, NowNodes or dRPC.
+Testnet​
+https://public-node.testnet.rsk.co
+Mainnet​
+https://public-node.rsk.co
+Supported JSON RPC methods​
+List of supported JSON-RPC methods for each module can be found in the JSON-RPC documentation.
+Using cURL​
+Here's an example request using cURL to get the Mainnet block number:
+
+"Content-Type: application/json"
+
+curl https://public-node.rsk.co \    -X POST -H "Content-Type: application/json" \    --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'Tags:rsknetworksrskj nodejson rpcmainnettestnetcURlPrevious4.5Management API MethodsNext6.0MaintenanceLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageTestnetMainnetSupported JSON RPC methodsUsing cURLMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

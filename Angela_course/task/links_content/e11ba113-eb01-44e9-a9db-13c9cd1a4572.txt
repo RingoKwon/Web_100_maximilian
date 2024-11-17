@@ -1,0 +1,70 @@
+
+
+
+
+
+Performing a peg-out using Ledger Hardware Wallet | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outViewing a derived bitcoin addressPeg-out using Metamask and any hardware walletPeg-out using LedgerPegout using MetamaskTroubleshooting and Common ErrorsViewing Peg-out Transaction StatusPeg-out using TrezorAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.4Peg-outPeg-out using LedgerTime to read: 1 minOn this pagePerforming a peg-out using Ledger Hardware Wallet
+Performing a peg-out transaction using rLogin(Trezor and Ledger)​
+​> - Note that we will be using the PowPeg  App on Testnet for learning purposes.
+
+
+For transactions using real tokens, use the Mainnet application.
+We're using Ledger Nano and Trezor One hardware wallets on this tutorial.
+To use Ledger hardware wallet to create a peg-in see How to perform a peg-in transaction using Ledger
+To use Trezor hardware wallet to create a peg-in see How to perform a peg-in transaction using Trezor
+
+
+Get started with Ledger​
+To perform a peg-out transaction using the Ledger device directly, follow the steps below:
+Step 1:  Plug the Ledger device into the computer
+Step 2: Enter your pin to unlock it
+Step 3: On the device, navigate to the TRSK or RSK Test App on your Ledger device
+​
+Step 4: Access peg-out screen:
+
+Step 5: Choose Ledger option:
+
+Step 6: Click on Ledger button 
+
+Step 8: The application will show what network you are connecting on. For this tutorial we are using Testnet
+
+Step 9: The application will show a simple tutorial:
+
+
+
+
+
+Step 10: Click on the Finish tutorial and connect button: 
+
+Step 11: Select an account 
+
+Step 12: Ledger Connected 
+
+
+Step 13: Continue filling in the other fields as amount and click on the Send button
+Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using Electrum
+
+Next​
+
+See Performing a peg-out transaction using Ledger and Liquality
+
+
+Resources​
+
+PowPeg App frontend repo
+PowPeg App backend repo
+Rootstock Testnet Faucet
+Design architecture
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.4.2Peg-out using Metamask and any hardware walletNext6.1.4.4Pegout using MetamaskLast updated on Nov 7, 2024 by Owanate AmachreeOn this pagePerforming a peg-out transaction using rLogin(Trezor and Ledger)Get started with LedgerNextResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

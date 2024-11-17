@@ -1,0 +1,32 @@
+
+
+
+
+
+Updating the Node | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCPublic NodesMaintenanceNetwork UpgradesUpdating the NodeTroubleshooting6.0MaintenanceUpdating the NodeTime to read: 1 minOn this pageUpdating the Node1. Download rskj​
+Download the latest release from the Github repo.
+2. Update jar file​
+Note that PREVIOUS and NEW refer to version numbers.
+cd /usr/share/rsksudo service rsk stopsudo mv rsk.jar rsk-PREVIOUS.jarsudo mv rskj-core-NEW-all.jar rsk.jar
+3. Clean up log directory​
+This step is optional.
+sudo mkdir /var/log/rsk/PREVIOUS/sudo mv /var/log/rsk/rsk* /var/log/rsk/PREVIOUS/sudo service rsk start
+4. Validate service is running normally​
+Check logs:
+tail -f /var/log/rsk/rsk.log
+Check that Blockchain is moving forward, and adding blocks:
+curl -s -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","method":"eth_blockNumber", "params": {},  "id":123}' http://127.0.0.1:4444 | jq .result | tr -d '"' | awk '{print "printf \"%d\\n\" "$0}' | sh
+If you run this command a few times and the block number is increasing,
+it means it is syncing correctly too.Tags:rskrskjnodeupdateversionrootstockPrevious6.1Network UpgradesNext7.0TroubleshootingLast updated on Nov 7, 2024 by Owanate AmachreeOn this page1. Download rskj2. Update jar file3. Clean up log directory4. Validate service is running normallyMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

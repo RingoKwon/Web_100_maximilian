@@ -1,0 +1,94 @@
+
+
+
+
+
+Performing a peg-out transaction using Trezor | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outViewing a derived bitcoin addressPeg-out using Metamask and any hardware walletPeg-out using LedgerPegout using MetamaskTroubleshooting and Common ErrorsViewing Peg-out Transaction StatusPeg-out using TrezorAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.4Peg-outPeg-out using TrezorTime to read: 1 minOn this pagePerforming a peg-out transaction using Trezor
+Get started with Trezor​
+To perform a peg-out transaction using the Ledger device directly, follow the steps below:
+
+
+Step 1: Plug the Ledger device into the computer
+
+
+Step 2: Verify if you have enabled Perform Safety Checks to PROMPT
+
+
+If is not enabled you will receive this error 
+This video explains how to enable Perform Safety Checks to PROMPT on Trezor Suite Enabling Prompt for Key Path
+
+
+
+
+
+Step 3: Access peg-out screen:
+
+
+
+Step 4: Click on Connect wallet button:
+
+
+
+
+
+Step 5: Click on Trezor button
+
+
+
+Step 6: The application will show what network you are connecting on. For this tutorial we are using Testnet
+
+
+
+
+
+
+Step 6: Plugin your Trezor device:
+
+
+
+Step 7: The trezor window will open to insert the pin and export the addresses
+
+
+
+Step 8: Insert the pin and click on confirm button
+
+
+
+Step 9: Insert the passphrase
+
+
+
+Step 10: Follow instructions on your device 
+
+
+
+​> - Note the trezor app screen will be opened some times, because the system will ask for addresses, each ask will open again the trezor screen, and the user will need to inform the trezor-pin.
+
+Step 11: Select account
+
+
+
+
+Step 12: Success
+
+
+
+
+Step 13: Continue filling in the other fields as amount and click on the Send button
+
+
+Step 14: After finish the pegout transaction creation, click here to see how to see the steps to access to Bitcoin derived address in hardware wallet using Electrum
+
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.4.6Viewing Peg-out Transaction StatusNext6.1.5Advanced OperationsLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageGet started with TrezorMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

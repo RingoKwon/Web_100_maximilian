@@ -1,0 +1,55 @@
+
+
+
+
+
+Overview | Peg-out | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outViewing a derived bitcoin addressPeg-out using Metamask and any hardware walletPeg-out using LedgerPegout using MetamaskTroubleshooting and Common ErrorsViewing Peg-out Transaction StatusPeg-out using TrezorAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg AppPeg-outTime to read: 1 minOn this pageOverview | Peg-out
+In this section, we will learn how to perform a peg-out transaction on the PowPeg app, to convert RBTC to BTC.
+To start using PowPeg App, you will need to connect your RSK wallet:
+
+
+Connect your wallet:
+
+
+
+Once connected your will see your address and your balance:
+
+
+
+
+To get started, see the Requirements for Pegout section.
+
+We will do the following:
+
+Perform a peg-out using MetaMask wallet
+Perform a peg-out using Ledger+Liquality
+How to get a Bitcoin derived address in hardware wallet using Electrum
+Viewing a Transaction Status
+Troubleshooting and common errors
+
+
+Next​
+
+Convert BTC - RBTC using the PowPeg App.
+View Advanced Operations.
+
+
+Resources​
+
+PowPeg App frontend repo
+PowPeg App backend repo
+Rootstock Testnet Faucet
+Design architecture
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.3.4Peg-in using Trezor Hardware WalletNext6.1.4.1Viewing a derived bitcoin addressLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageNextResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

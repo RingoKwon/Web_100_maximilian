@@ -1,0 +1,169 @@
+
+
+
+
+
+REMASC | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningImplementation GuideConfigure Node for MiningReferenceAutominerRemascJSON RPCPublic NodesMaintenanceTroubleshooting3.0Merged MiningRemascTime to read: 1 minOn this pageREMASCReward Manager Smart Contract (REMASC) is a pre-compiled smart-contract that is executed on every block and has the responsibility to fairly distribute rewards collected from transaction fees into several participants of the network. However the distribution of rewards of a block is only performed once the block reaches a certain maturity. In other words, the rewards are paid only after a  fixed number of blocks have confirmed a block. With the exception of the first blocks in the blockchain after genesis, every time a block is added to the blockchain, another previous block reaches maturity and its rewards are paid.
+REMASC is an implementation of DECOR+.
+How it Works​
+The REMASC contract maintains different internal accounts. One of these internal accounts is called Reward Balance. The Reward Balance always exists and its value can change when a new block is processed because of any of the following reasons:
+
+The block was accepted on the mainchain and all its transaction fees are added to the Reward balance.
+Miners and other rewarded parties get paid their reward and the rewarded value is subtracted from the Reward balance.
+
+As an example, let’s assume that a block has 2 transactions: One paying 100000 gas at 2 smart weis and the other paying 25000 gas at 3 smart weis. Let’s also assume that prior processing of the block, the Reward Balance was 1000000 smart weis. After processing the block the Reward Balance will be updated to 1000000 + 200000 + 75000 = 1275000 smart weis.
+From this Reward Balance, the 10% (127500 in the example) will be subtracted to pay the miners having mined at the corresponding height. This creates a synthetic reward, that is equivalent to applying a low-pass filter to the received fees, and so this method has also been called fee smoothing. The 10% amount extracted from the Reward Balance, is called the Full Block Reward and will be referred to as F from now on.
+The amount of fees in F will be affected by the following variables:
+
+The number of siblings mined at the same processing height
+The fact that the Selection Rule was respected or broken
+
+Some additional definitions will be introduced before we formalize how the payment is calculated for each miner.
+One and only one block is mined at a height N. This block is the main block at height N. Blocks that share a parent with a main block are called siblings. These blocks can be added to the blockchain by publishers, which are always miners mining following blocks.
+The payment for the miners of the main block, the siblings and the publishers will occur on the block N + 4000. The payment occurs as specified by the following rules:
+
+
+ is the 100% of the block reward
+
+
+Rootstock will receive a fee of ~20% of the full block reward:
+
+
+
+Rootstock Federation will receive a fee of ~0.8% of the full block reward:
+
+
+
+Miners will receive a payment of ~79.2% of the full block reward:
+
+
+
+
+It’s important to notice that these are integer divisions where results are rounded down. That’s why:
+
+
+Now we present several different scenarios:
+
+
+There are no siblings at height N
+
+
+No Rule was broken
+The miner of the block at height N is paid
+
+
+
+Rule was broken
+The miner is paid 90% of the
+
+
+
+which is defined as
+
+
+
+There are siblings at height N.
+Each sibling will have a respective publisher and miner, so we define:
+
+
+Publisher Fee (~10% of  )
+
+
+
+Miner Fee (~90% of  )
+
+If we S is the number of siblings, we define:
+
+
+Individual Publisher Fee
+
+
+
+Individual Mining Fee
+To simplify we define
+,
+is given by the Mining Fee over all mined blocks referenced on the blockchain (which is siblings + the main block), then individual mining fee is:
+
+
+No Rule was broken
+
+
+
+Rule was broken
+
+
+
+
+
+
+
+Finally, with all the previous variables computed, the payments will be performed as follows:
+Each publisher receives
+
+The miner of the main block receives
+
+Also, for each sibling, a new amount needs to be calculated. This is, for each late block that the sibling published, it receives a punishment of ~5% of the
+.
+The sibling is added on the block N+D for some positive value of D. A punishment for late publication is calculated for each as
+
+Then the respective miners are paid
+
+The remaining amount of  is added to a balance called Burned Balance. As of this writing, burned money is lost but changes may apply. The Burned Balance is given by rounding errors or punishments.
+Example​
+Suppose the Reward Balance is 90000 smart weis and the payment for this N is 10000 smart weis. Then the reward balance is updated to 100000 smart weis. From this, the 10% will be distributed, which is 10000 smart weis.
+
+A, B and C share the parent P. B is the main block at height N and A and C are siblings. D is publisher of C and E is publisher of A.
+This way, we compute:
+
+
+Rootstock receives
+
+
+
+RSK Federation receives
+
+
+
+Miners receive a total of
+
+
+
+B and C blocks receive Individual Mining Fee
+
+In this case blocks are not published late so L is 0, that is why
+
+is used in the calculation instead of
+
+
+
+A receives
+
+
+
+
+In this case A was published late so L is not 0, that is why
+
+is used in the calculation instead of
+
+
+
+
+
+For this example, an assumption that there wasn’t a broken rule for any block was made. Otherwise, fees paid should have been calculated using .
+References​
+
+DECOR+
+RSKIP-15
+Tags:rskrootstockminingbitcoinremascPrevious3.4AutominerNext4.0JSON RPCLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHow it WorksExampleReferencesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,32 @@
+
+
+
+
+
+Add a Protocol To DefiLlama | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsInteract with Rootstock using RustAdd Rootstock to Metamask ProgrammaticallydApp Automation with Cucumber & PlaywrightCreate Virtual Testnets on Rootstock using TenderlyAdd a Protocol To DefiLlamaHyperlane BridgePort to RootstockGuidesHackathonsFAQs4.0TutorialsAdd a Protocol To DefiLlamaTime to read: 1 minOn this pageAdd a Protocol To DefiLlamaDefiLlama is the leading aggregator for Total Value Locked (TVL) in the decentralized finance (DeFi) ecosystem. Its open-source data is maintained by a community of contributors from various protocols. DefiLlama prioritizes accuracy and transparency in its methodology.
+TVL is calculated by assessing the value of tokens locked in the contracts of DeFi protocols and platforms. While bridge projects are included in the calculation, their TVL does not contribute to the overall TVL of any specific blockchain.
+
+Check out the DefiLlama website and DefiLlama docs for more details.
+
+How to list a DeFi project​
+Most adapters featured on DefiLlama are provided and managed by their individual communities, and any modifications are organized through the DefiLlama/DefiLlama-Adapters GitHub repository.
+How to Submit a Project
+How to write an SDK adapter​
+An adapter is a piece of code designed to receive a UNIX timestamp and blockchain block heights as inputs. It then provides the balances of assets held within a protocol, considering the associated decimals (i.e., how they are stored on the blockchain). The SDK handles the conversion of raw asset balances into their equivalent in USD and aggregate them to calculate the total TVL. Consequently, the adapter requires minimal processing, as most of the conversion work is performed by the SDK.
+How to write an SDK Adapter
+Resources​
+
+Visit DeFiLlama About to learn more.
+Tags:knowledge-basedefillamaprotocolrootstockdefiPrevious4.4Create Virtual Testnets on Rootstock using TenderlyNext4.6Hyperlane BridgeLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHow to list a DeFi projectHow to write an SDK adapterResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,95 @@
+
+
+
+
+
+Configure MetaMask Wallet for Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsConfigure MetaMaskRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersExplorersDev EnvironmentsAttestationsNo CodeGeneral Tools2.0WalletsConfigure MetaMaskTime to read: 1 minOn this pageConfigure MetaMask Wallet for RootstockIn this guide, you will learn about the different ways to set up and connect to Rootstock network using MetaMask.
+Option 1: Add Rootstock Networks to MetaMask Automatically​
+
+Ideal for general users looking to automatically add the Rootstock network to their MetaMask wallet.
+
+
+Install MetaMask on your browser from the official website: https://metamask.io/download/
+Click on the buttons below to add Rootstock Mainnet and Rootstock Testnet
+
+Loading...
+
+Add Rootstock Mainnet to MetaMaskAdd Rootstock Testnet to MetaMask
+Option 2: Add Rootstock Networks to MetaMask Manually​
+
+Ideal for both developers and general users looking to manually add the Rootstock network to their MetaMask wallet.
+
+
+Install Metamask on your browser from the official website: https://metamask.io/download/
+Open the MetaMask extension.
+In the network selector (top left corner), choose Add Network.
+
+ 
+
+ 
+
+
+
+Click on Add Network Manually
+
+
+Fill the required fields to add Rootstock Mainnet or Testnet with the network settings from the table below:
+
+
+ 
+FieldRootstock MainnetRootstock TestnetNetwork NameRootstock MainnetRootstock TestnetRPC URLhttps://public-node.rsk.cohttps://public-node.testnet.rsk.coChainID3031SymbolRBTCtRBTCBlock explorer URLhttps://explorer.rootstock.io/https://explorer.testnet.rootstock.io/
+
+Option 3: Add Rootstock Networks to MetaMask Programmatically​
+
+Ideal for developers looking to initiate a network switch on MetaMask from a website or dApp.
+See how to Connect Rootstock to Metamask Programmatically.
+
+Watch the Video Explainer​
+
+Limitations​
+MetaMask does not yet fully comply with the technical specifications
+of account based addresses on Rootstock.
+Note that there are workarounds available,
+which allow most users to use MetaMask on Rootstock successfully.
+MetaMask uses the Ethereum value for derivation path,
+and presently does not allow it to be configured.
+This means that if you use the same seed phrase in MetaMask and other wallets,
+you will get a different set of addresses.
+A workaround for this is to use custom derivation paths
+when using other wallets that support this feature.
+MetaMask does not presently support EIP-1191 checksums.
+This means that if you use the addresses copied from MetaMask,
+you may encounter checksum validation errors.
+A workaround for this is to lowercase the addresses after copying them.
+Disclaimer
+Currency may be mistakenly displayed as ETH within some screens of MetaMask.
+The Rootstock network uses RBTC as its cryptocurrency.
+This tutorial uses the Public Nodes as RPC. You can connect to other nodes or use the Rootstock RPC API.
+The node must enable CORS for browser-based dApps to work.
+
+Please review the configuration file reference for CORS settings.
+
+
+
+Next Steps​
+Deploy a dApp on Rootstock or try out the Rootstock Testnet:
+
+Get test RBTC
+Get test RIF tokens
+View the Quick Starts
+
+If you would like to know more about the values used in the
+custom network configuration above, check out
+account based addresses on Rootstock.Tags:metamaskrootstocktoolsrskwalletsguidesPrevious2.0WalletsNext3.0RPC Node ProvidersLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageOption 1: Add Rootstock Networks to MetaMask AutomaticallyOption 2: Add Rootstock Networks to MetaMask ManuallyOption 3: Add Rootstock Networks to MetaMask ProgrammaticallyWatch the Video ExplainerLimitationsNext StepsMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

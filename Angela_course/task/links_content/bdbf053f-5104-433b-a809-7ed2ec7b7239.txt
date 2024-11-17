@@ -1,0 +1,26 @@
+
+
+
+
+
+Supported Browsers | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsDesign and ArchitectureSupported AddressesSupported BrowsersSupported WalletsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.5Advanced OperationsSupported BrowsersTime to read: 1 minSupported Browsers
+Google Chrome
+Brave Browser
+
+
+Note: The current v1.4.0 of the PowPeg App is currently not operational on mobile devices.
+
+
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.5.2Supported AddressesNext6.1.5.4Supported WalletsLast updated on Nov 7, 2024 by Owanate AmachreeMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

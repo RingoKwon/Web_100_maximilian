@@ -1,0 +1,47 @@
+
+
+
+
+
+Hackathon and Workshop Resources | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesHackathonsFAQsHackathonsTime to read: 1 minOn this pageHackathon and Workshop ResourcesThis guide details the necessary hardware and software requirements for developing on the Rootstock blockchain.
+It includes setup instructions for essential tools such as Java, Node.js, Hardhat, and RSKj, ensuring developers have a clear path to prepare their environment for Rootstock projects, whether for local development, testing, or deployment.
+For IRL hackathons and events, download the Hackathon Cheatsheet PDF with QR Codes.
+Prerequisites​
+This guide is designed to help both beginners and experienced developers get started with building on Rootstock. The content is organized to help you find what you need based on your skill level.
+BeginnersExperienced DevelopersIf you're new to blockchain development, start here! We've outlined the essential skills and tools you'll need to begin your journey.Basic Programming Knowledge
+Familiarity with programming languages like JavaScript or Python will be helpful, even if you're new to blockchain development.Understanding Blockchain Basics
+Learn about blockchain technology, smart contracts, and dApps before diving in. We recommend starting with introductory resources on blockchain concepts.Intro to Web3 Development Tools
+While not strictly necessary to start, getting a basic understanding of tools like Remix IDE for smart contract development will make your journey smoother. We have beginner-friendly tutorials available here.Version Control with Git (Optional)
+Learning basic Git and GitHub skills can help you manage projects and collaborate with others.Start building your first dApp using hardhat Quickstart Guide for Beginners.If you already have a background in blockchain or Web3 development, you can dive straight into more advanced topics and leverage the tools available on Rootstock.Knowledge of Blockchain and Smart Contracts
+You should be comfortable with blockchain principles and decentralized networks.Experience with Web3 Development Tools
+Tools like Hardhat, Web3.js, and Remix IDE should be part of your existing toolkit.Basic Programming Skills
+Proficiency in Solidity and other Web3-related programming languages (like JavaScript/React or Python/Web3.py) will be beneficial.Familiarity with ERC Standards
+Understanding ERC20, ERC721, and ERC1155 standards for token contracts will be valuable.Advanced Topics (Optional)
+Knowledge of account abstraction, automation frameworks like Cucumber, and other advanced Web3 concepts can help you explore more sophisticated solutions.Access our Guide for Experienced Developers to get started.
+Tools to Speed Up Your Development​
+These tools will make it easy for you to build on Rootstock:
+
+Remix IDE: An integrated development environment tailored for smart contract development.
+Hardhat: A flexible development environment for building and deploying smart contracts.
+Web3.py: JavaScript and Python libraries for interacting with the Ethereum blockchain.
+Rootstock Explorer: A blockchain explorer to view transaction details on the Rootstock network.
+RPC API: The RPC API provides a seamless and intuitive web interface for developers to interact with Rootstock nodes via JSON-RPC methods.
+
+Explore the full list of tools and libraries available on Rootstock.
+Prerequisites pageFor more information on specific requirements for developing on Rootstock, Visit the Prerequisites page page.
+Rootstock Hackathon CheatsheetThe Rootstock Hackathon Cheatsheet is a concise reference guide for developers aiming to deploy decentralized applications (dApps) on the Rootstock network.
+
+Starter Kits​
+Quickstart Kits/SectionsDescriptionPrerequisitesActionWagmi Starter KitThis starter kit provides a foundation for building decentralized applications (dApps) on the Rootstock blockchain using React, Wagmi, and Shadcn libraries.Basic understanding of React and Web3.jsUse the KitHardhat Starter KitSmart Contract examples, Tests, Deployments, and Tasks for Common ERC Standards (ERC20, ERC721, ERC1155).Familiarity with Hardhat, Solidity, and ERC standardsUse the KitAccount Abstraction KitAccount Abstraction Starter dApp using Etherspot.Knowledge of account abstraction and EtherspotUse the KitdApp Automation with CucumberLearn how to automate dApps using Cucumber Agile Automation Framework.Basic understanding of automation frameworks like CucumberAutomate dAppsRIF Relay Starter KitStarter kit to develop on RIF Relay.Understanding of RIF Relay and smart contractsUse the KitGet Started with The GraphEasily query on-chain data through a decentralized network of indexers.Familiarity with querying on-chain data and The Graph protocolGet StartedGet Started with Web3.pyGet started with deploying and interacting with smart contracts on Rootstock using Web3.py.Knowledge of Python and Web3.pyGet StartedPort an Ethereum dApp to RootstockLearn how to port an Ethereum dApp to Rootstock.Experience with Ethereum dApp developmentGet StartedDeploy, Interact and Verify Smart Contracts using Remix and Rootstock ExplorerIn this guide, we will use the Remix IDE to write, compile, deploy, interact, and verify a smart contract on the Rootstock Explorer.Familiarity with Remix IDE and smart contract basicsUse RemixTags:hackathonsrskworkshopresourcesrootstockPrevious6.3.5Token Bridge TroubleshootingNext8.0FAQsLast updated on Nov 7, 2024 by Owanate AmachreeOn this pagePrerequisitesTools to Speed Up Your DevelopmentStarter KitsMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

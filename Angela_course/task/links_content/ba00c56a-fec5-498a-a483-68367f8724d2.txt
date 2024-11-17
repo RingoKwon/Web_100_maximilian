@@ -1,0 +1,65 @@
+
+
+
+
+
+Overview | Advanced Operations | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsDesign and ArchitectureSupported AddressesSupported BrowsersSupported WalletsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg AppAdvanced OperationsTime to read: 1 minOn this pageOverview | Advanced OperationsThis section contains detailed instructions on how to perform advanced operations on the PowPeg App.
+These operations include;
+
+How to review funds in Bitcoin after a pegout by viewing a derived address,
+Convert RBTC - BTC and import a key in Electrum, import in Electrum if you are using hardware wallets
+Selecting different accounts
+Viewing advanced details
+Adjusting network fees
+Viewing Advanced data
+
+
+For  more information, see design and architecure, supported addresses, supported wallets, supported browsers
+
+
+Account selection​
+Pegin:​
+There are three types of accounts on the PowPeg App. See supported addresses section for examples of these types of addresses.
+To select an account to send BTC from, click on Select the account as shown in the image below. This loads the balance for all the addresses in your hardware wallet.
+
+Note: Your hardware wallet must be connected to view this section of the PowPeg App.
+
+
+Choose the address you want to send TBTC from. See the getting funds section for how to get BTC or TBTC.
+Advanced data​
+Unsigned raw tx
+A Bitcoin raw transaction is a chunk of bytes that contains the info about a Bitcoin transaction. That raw transaction will become part of the blockchain when a miner adds it to a block. The pegin transaction has at least one input and two outputs, all information is encoded and displayed for the users’ verification.
+Adjusting network fees​
+There are three options to choose from when deciding on which fee rate to use when sending a transaction.
+Slow
+A slow transaction is less expensive and will take longer to confirm.
+
+Average
+This is also known as normal, here, the transaction is priced at an average rate and will take an average time to confirm.
+
+Fast
+A fast transaction is the most expensive but the transaction confirms at the quickest time possible.
+
+
+The type of fee to be selected depends on several variables, like network speed, time, and amount the user is willing to spend on a single transaction.
+
+
+Resources​
+
+PowPeg App frontend repo
+PowPeg App backend repo
+Rootstock Testnet Faucet
+Design architecture
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.4.7Peg-out using TrezorNext6.1.5.1Design and ArchitectureLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageAccount selectionPegin:Advanced dataAdjusting network feesResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

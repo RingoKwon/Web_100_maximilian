@@ -1,0 +1,22 @@
+
+
+
+
+
+Explorers on Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsAll ToolsWalletsRPC Node ProvidersAccount AbstractionOraclesCross Chain BridgesData IndexersExplorersRootstock ExplorerBlockscout Explorer3xpl ExplorerDev EnvironmentsAttestationsNo CodeGeneral ToolsExplorersTime to read: 1 minOn this pageExplorers on RootstockBlockchain explorers are a special type of software that connect to a blockchain network, and display the data from an immutable public ledger.
+Since it is open and transparent, there is nothing stopping multiple block explorers from displaying the data in a single blockchain. This is certainly true for Rootstock, and there are multiple block explorers. Think of it like a search engine but for the blockchains, it allows for exploring transactions, blocks, addresses, tokens, and even interacting with smart contracts.
+InfoTo understand how block explorers work, read the complete guide on exploring blockchain transactions
+Explorers on Rootstock​
+explorersRootstock ExplorerThe Rootstock Explorer provides a UI for exploring and verifying transactions, blocks, addresses, tokens, stats, and interacting with smart contracts.Use the ExplorerexplorersBlockscout ExplorerBlockscout is an open-source tool for exploring transactions on any EVM blockchain, including Rootstock, the leading Bitcoin sidechain. With Blockscout, you can access in-depth information, verify and interact with smart contracts, create and manage your account, view advanced statistics, and more.Use the Explorerexplorers3xpl3xpl (short for 3xplor3r) is a super-fast, universal explorer for most popular public blockchains. It offers an easy-to-understand block explorer interface for ordinary crypto users, as well as lots of professional features for developers and analysts.Use the ExplorerTags:hardhatquick startdeveloper toolsrskrootstockethereumdAppssmart contractsPrevious7.4GoldskyNext8.1Rootstock ExplorerLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageExplorers on RootstockMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

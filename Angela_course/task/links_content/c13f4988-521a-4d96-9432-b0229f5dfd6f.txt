@@ -1,0 +1,45 @@
+
+
+
+
+
+Setup node on Docker | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationSetup node using JavaSetup node on DockerSetup node on UbuntuConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node Setup2.2Node InstallationSetup node on DockerTime to read: 1 minOn this pageSetup node on DockerBefore installing Docker, ensure your system meets the minimum requirements before installing the Rootstock node (RSKj).
+If you already have docker installed. See how to Install the RSKj node using Docker.
+Install Docker Desktop Client​
+Docker Desktop provides an easy and fast way for running containerized applications on various operating systems.
+Mac OSX, WindowsLinux
+Download and install
+Start the Docker Desktop client
+Login with a Docker Hub free account
+
+Install Docker Engine Community
+Note that you will need to use sudo for all docker commands, by default. To avoid this additional steps are required.
+
+For Mac M1 / M2 (Apple Chips) using x86 based software
+Ensure you have Rosetta installed. This is typically pre-installed on recent macOS versions.
+Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
+
+Ensure that docker is running by running the following command - it should run without any errors.
+docker ps
+You should see the following response:
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+More information about Docker install here.
+Install RSKj Using Docker​
+To install a RSKj node using Docker, visit the Docker Hub for installation instructions or use the Reproducible Build.
+Logging in RSKj​
+By default, logs are exclusively directed to a single file. However, if you wish to enable the logging output to STDOUT, you can specify this system property via the command line using -Dlogging.stdout=<LOG_LEVEL>. That command should look something like this:
+java -Dlogging.stdout=INFO -cp <classpath> co.rsk.Start --reset --<RSK network>
+Regarding the RSKj Docker containers, logs are printed to STDOUT by default, making it easy to view the logs while the container is running. In order to modify this, you can run the Docker container with the environment variable set to a different LOG_LEVEL (For example, DEBUG log level). That command should follow this structure:
+docker run -e RSKJ_LOG_PROPS=DEBUG <container-name>Tags:dockerrootstockdesktopmacOSrskjwindowsinstallrsknodehow-tonetworkrequirementsmainnettestnetregtestPrevious2.2.1Setup node using JavaNext2.2.3Setup node on UbuntuLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageInstall Docker Desktop ClientInstall RSKj Using DockerLogging in RSKjMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,18 @@
+
+
+
+
+
+JSON RPC | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCRPC MethodsTransport ProtocolPersonal ModuleConfiguration LimitsManagement API MethodsPublic NodesMaintenanceTroubleshootingJSON RPCJSON RPCRPC MethodsThe JSON-RPC methods supported by Rootstock nodes.Transport ProtocolThe JSON-RPC methods supported by Rootstock nodes.Personal ModuleThe JSON-RPC methods supported by Rootstock nodes.Configuration LimitsThe JSON-RPC methods supported by Rootstock nodes.Management API MethodsThe JSON-RPC methods supported by Rootstock nodes.Previous3.5RemascNext4.1RPC MethodsMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

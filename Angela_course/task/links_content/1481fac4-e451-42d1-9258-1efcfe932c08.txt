@@ -1,0 +1,162 @@
+
+
+
+
+
+Performing a peg-in using Ledger Hardware Wallet | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-in using Ledger Hardware WalletPeg-in using Leather Software WalletViewing Peg-in Transaction StatusPeg-in using Trezor Hardware WalletPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.3Peg-inPeg-in using Ledger Hardware WalletTime to read: 1 minOn this pagePerforming a peg-in using Ledger Hardware WalletUsing hardware wallets​
+In this guide, we will be using the PowPeg on PowPeg - Testnet for learning purposes, for transactions using real tokens, please use the PowPeg - Mainnet App.
+WarningEnsure to complete the steps in prerequisites before proceeding with this section.
+Ledger Hardware Wallet​
+
+
+Step 1: Connect to a ledger wallet
+
+Plug your Ledger wallet by connecting the USB cable that comes with the Ledger.
+Enter your pin that has already been configured in requirements, to unlock the Ledger.
+
+Step 2: Enter Pin
+
+Step 3: Choose Wallet
+Here, we will use the Bitcoin Test wallet. For Mainnet, use the Bitcoin wallet.
+
+Note: On the Nano S ledger, whenever you want to confirm an option, click on the 2 upper buttons at the same time.
+Step 4: Confirm connection to Bitcoin Testnet
+Once the above steps have been completed, a confirmation appears - “Bitcoin Testnet is ready”.
+
+Now, you have successfully connected your Ledger device to the Bitcoin network.
+Performing a peg-in transaction with Ledger​
+A peg-in is the process of exchanging BTC for RBTC. See the glossary section for more information.
+TipThe minimum values allowed when creating a peg-in transaction is 0.005 BTC.
+Open PowPeg on Testnet.
+Step 1: Select Conversion Type
+Since we are performing a peg-in, choose the BTC - RBTC conversion type, as shown in the image below;
+
+Step 2: Choose Hardware Wallet
+Here, we are using the ledger hardware wallet to interact with the PowPeg. Select your hardware wallet, ensure your device is already connected by inserting your pin into the Ledger device before clicking the Ledger option in the PowPeg. See the connect to a ledger wallet section.
+
+Step 3: Read pop up information
+The pop up shown in the image below describes the duration of the peg-in process which requires at least 100 confirmations on the Bitcoin network, this gives an estimate of around 17 hours in total. It also describes the three main steps involved which is; connecting to the hardware wallet, sending a signed transaction to the BTC network until the corresponding RBTC value is made available in the destination wallet and a receipt for this transaction.
+
+Note: Using fast mode, pegin time has been significantly reduced to ~20 mins.
+
+
+
+Click the checkbox - “Don’t show again” to turn off this pop-up in the future or close temporarily.
+
+Step 4: Connect to the App
+Click Continue to connect to the PowPeg App.
+
+
+The PowPeg shows the pop-up with the connected usb ledger devices, if your device is not visible, unplug the usb device and plug in again, unlock with a pin and click Retry or go back to the connect ledger wallet section.
+
+To confirm successful connection to the PowPeg, you will be directed to the screen below, where we will perform a Peg-in transaction.
+
+
+
+The balance of the accounts in your hardware wallet will be loaded, and this shows the balance of 3 different types of accounts: segwit, legacy, native segwit. See the supported addresses for the meaning of these types of accounts.
+
+
+Step 5: Sending a transaction
+Choose Account
+Select the account you would like to send BTC from, by clicking on the dropdown as shown in the image below.
+
+InfoFor each selected account type, we will see a corresponding balance.ente
+
+Enter Amount
+After selecting the account you will like to send BTC from, the next step is to enter an amount you would like to send. The amount entered appears in the BTC field, and you can see the corresponding amount in USD under transaction summary.
+
+
+
+The minimum amount to send to perform a pegin operation is 0.005 BTC, any amount less than this throws an error message: “You cannot send that amount of BTC, you can only send a minimum of 0.005 BTC”.
+The minimum amount to send to perform a pegout operation is 0.004 RBTC, any amount less than this throws an error message: “You cannot send that amount of BTC, you can only send a minimum of 0.005 BTC”.
+The maximum amount to send to perform a pegout or pegout operation is 10 RBTC / BTC, any amount greater than this throws an error message: “The maximum accepted value is 10”.
+
+
+
+
+Note that the amount sent in BTC is the same amount to be received in RBTC on the Rootstock network.
+
+
+Step 6: Enter address
+To enter an address, we are provided with two options:
+
+(1) Your connected Rootstock address. See Account based addresses
+(2) Connect to a software wallet. E.g, Metamask. Here, the address is automatically filled in by the account that is connected to your metamask wallet.
+
+
+Step 6a: Add a custom address
+Also you can input a custom Rootstock address, different than the connected address.
+Step 7: Select Transaction Fee
+Here, we can select the fee that will be used for this transaction, this is set on default to average.
+
+
+
+The transaction fee is not part of the amount you’re sending via the PowPeg, it will only be used for the correct processing of the transaction on the Bitcoin network. Also see the different types of fees (slow, average, fast) and their corresponding cost in TBTC and USD, depending on preference, you can choose any of those three. See the adjusting network fees section for more information.
+The time for each type of fee per transaction may vary depending on the number of transactions on the network and the fees charged at the time.
+
+
+Step 8: View transaction summary
+In this section, we can confirm the selected values:
+
+Destination Address
+Estimated time
+BTC fee (Network fee)
+Provider fee (always zero for this option)
+Amount to send
+Value to receive
+
+
+
+
+In the instance of an error on this transaction, the amount will be sent to the address indicated in the refund Bitcoin address located in your hardware wallet.
+See the glossary section for the meaning of these values.
+
+
+
+Step 9: Confirm and sign transaction
+By clicking on the Confirm button, we can see all the transactions that will be made, their corresponding inputs and outputs, and the network fees that will be charged, all this information must be confirmed on your hardware wallet screen.
+
+Step 10: Send transaction in Ledger Device
+After click on the send button, you can confirm or reject the transaction in your hardware wallet. Unlock ledger device to confirm the transaction.
+The user needs to review and approve all outputs, the value of the transaction and the fee of the transaction. This test transaction generates 3 outputs.
+
+To approve or confirm any action on the screen, press on the two buttons beside the ledger hardware device at the same time.
+
+Review and accept output 1
+
+
+Review and accept the output 2
+
+
+Review and accept the output 3
+
+
+Confirm amount of test transactions
+
+Confirm if the fee value is the same present in the transaction summary screen.
+
+Now, confirm all transactions
+
+Accept and send the transaction to be broadcasted to the network.
+
+
+After signing, the transaction is sent to the network to be processed, taking into account the fee value selected previously.
+
+Step 11: View transaction status
+This shows the status of your transaction, with a transaction ID and a link to check the transaction on the explorer.
+
+By clicking on the See Transaction button, the user can check the status directly in the transaction status page, by clicking in Start Again button the user can perform another transaction.
+See the Viewing Peg-in Transaction Status section for more information.
+Now you have successfully performed a peg-in transaction using the PowPeg.Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.3Peg-inNext6.1.3.2Peg-in using Leather Software WalletLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageUsing hardware walletsLedger Hardware WalletPerforming a peg-in transaction with LedgerMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

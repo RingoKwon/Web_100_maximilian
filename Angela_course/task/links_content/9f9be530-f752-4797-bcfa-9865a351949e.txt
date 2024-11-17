@@ -1,0 +1,26 @@
+
+
+
+
+
+RSKj Node Installation | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationSetup node using JavaSetup node on DockerSetup node on UbuntuConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node SetupNode InstallationTime to read: 1 minOn this pageRSKj Node InstallationRootstock nodes can be installed on Ubuntu OS, Windows, Docker and Java. Here, we provide step-by-step instructions for all supported dev environments. Depending on your network performance, it usually takes 10 to 15 mins to setup a working node on Mainnet.
+
+Ensure that your system meets the minimum requirements before installing the Rootstock nodes.
+
+
+Looking to test your dApps on testnet in minutes before deploying to mainnet? Use the RPC API
+
+Supported Environments​
+EnvironmentsHow to InstallUbuntu PackageVisit Setup Node on Ubuntu for instructions on installing Rootstock Node on ubuntu systemsJava - Fat / Uber JARVisit Setup Node using JAR for instructions on installing Rootstock Node on any system with Fat JAR or Uber JAR.DockerVisit the Docker Hub for instructions on installing Rootstock Node as a docker container on any system.WindowsVisit Setup Node on Windows OSTags:rskrootstockrskjnodedevelopersmerged miningPrevious2.1Hardware RequirementsNext2.2.1Setup node using JavaLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageSupported EnvironmentsMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

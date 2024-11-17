@@ -1,0 +1,84 @@
+
+
+
+
+
+Setup node using Java | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationSetup node using JavaSetup node on DockerSetup node on UbuntuConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node Setup2.2Node InstallationSetup node using JavaTime to read: 1 minOn this pageSetup node using JavaTo setup a Rootstock node using Java, you need to:
+
+Ensure your system meets the minimum requirements for installing the Rootstock node.
+Install Java 17 JDK.
+
+ImportantStarting with v6.4.0, the minimum supported Java LTS version is Java 17. Previous Java versions will no longer be supported.
+For Mac M1 / M2 (Apple Chips) using x86 based software
+Ensure you have Rosetta installed. This is typically pre-installed on recent macOS versions.
+Download an x86 JDK build, such as Azul Zulu 17 (x86), to ensure compatibility with x86 based software.
+
+Video walkthrough​
+
+Install the node using a JAR file​
+Download and Setup​
+
+
+Download the JAR: Download the Fat JAR or Uber JAR from RSKj releases, or compile it reproducibly.
+
+
+Create Directory: Create a directory for the node.
+
+
+mkdir rskj-node-jarcd ~/rskj-node-jar
+
+Move the JAR: Move or copy the just downloaded jar file to your directory.
+
+mv ~/Downloads/rskj-core-6.4.0-ARROWHEAD-all.jar SHA256SUMS.asc /Users/{user}/rskj-node-jar/
+Run the Node​
+Linux, Mac OSXWindowsjava -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Startjava -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start
+TipReplace <PATH-TO-THE-RSKJ-JAR> with the actual path to your JAR file. For example, C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar.
+Using Import Sync​
+Instead of the default synchronization, you can use import sync to import a pre-synchronized database from a trusted origin, which is significantly faster.
+Linux, Mac OSXWindowsjava -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --importjava -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
+Resolving memory issues​
+Memory Issues? If you encounter memory errors and meet the minimum hardware requirements, consider using -Xmx4G flag to allocate more memory as shown below:
+Linux, Mac OSXWindowsjava -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --importC:\> java -Xmx4G -cp <PATH-TO-THE-RSKJ-JAR> co.rsk.Start --import
+TipReplace <PATH-TO-THE-RSKJ-JAR> with your JAR file path. For configuration details, see database.import setting.
+Check the RPC​
+InfoAfter starting the node, if there's no output, this means it's running correctly.
+
+To confirm, open a new console tab (it is important you do not close this tab or interrupt the process) and test the node's RPC server. A sample cURL request:
+
+Linux, Mac OSXWindowscurl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'curl http://localhost:4444 -s -X POST -H "Content-Type: application/json" --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
+Output:
+{"jsonrpc":"2.0","id":67,"result":"RskJ/6.4.0/Mac OS X/Java21/ARROWHEAD-e016b25"}
+
+To check the block number:
+
+Linux, Mac OSXWindowscurl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "method":"eth_blockNumber","params":[],"id":1}'curl -X POST http://localhost:4444/ -H "Content-Type: application/json" --data '{"jsonrpc":"2.0", "method":"eth_blockNumber","params":[],"id":1}'
+Output:
+{"jsonrpc":"2.0","id":1,"result":"0x3710"}
+SuccessNow, you have successfully setup a Rootstock node using the jar file.
+The result property represents the latest synced block in hexadecimal.
+Switching networks​
+To change networks on the RSKj node, use the following commands:
+
+Mainnet
+java -cp <PATH-TO-THE-RSKJ-FATJAR> co.rsk.Start
+
+Testnet
+java -cp <PATH-TO-THE-RSKJ-FATJAR> co.rsk.Start --testnet
+
+Regtest
+java -cp <PATH-TO-THE-RSKJ-FATJAR> co.rsk.Start --regtest
+
+
+TipReplace <PATH-TO-THE-RSKJ-FATJAR> with the actual path to your jar file. For example: C:/RskjCode/rskj-core-6.4.0-ARROWHEAD-all.jar.Tags:javainstallrootstockrskjnodehow-tonetworkrequirementsmainnetjarPrevious2.2Node InstallationNext2.2.2Setup node on DockerLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageVideo walkthroughInstall the node using a JAR fileDownload and SetupRun the NodeUsing Import SyncResolving memory issuesCheck the RPCSwitching networksMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

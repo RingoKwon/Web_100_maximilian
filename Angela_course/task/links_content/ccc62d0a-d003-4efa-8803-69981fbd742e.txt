@@ -1,0 +1,125 @@
+
+
+
+
+
+Run Hyperlane Bridge on Rootstock | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsInteract with Rootstock using RustAdd Rootstock to Metamask ProgrammaticallydApp Automation with Cucumber & PlaywrightCreate Virtual Testnets on Rootstock using TenderlyAdd a Protocol To DefiLlamaHyperlane BridgePort to RootstockGuidesHackathonsFAQs4.0TutorialsHyperlane BridgeTime to read: 1 minOn this pageRun Hyperlane Bridge on RootstockHyperlane is the first universal and permissionless interoperability layer built for the modular blockchain stack.
+This tutorial guides you through the process of setting up Hyperlane on the Rootstock blockchain to create seamless asset bridging between Rootstock and other compatible chains. You will learn how to install Hyperlane, configure custom chains, deploy contracts, and run validator and relayer nodes.
+Some example dApps that can be developed using Hyperlane bridge:
+
+Warp Routes, which allow native and ERC20 tokens to move seamlessly across chains such (e.g. Sending ERC20 tokens to/from Rootstock to BNB chian)
+Interchain accounts, which allows an account on one chain (e.g. a DAO) to make smart contract calls on remote chains
+Interchain queries, which allows an account on one chain such as Rootstock to make view (read calls) on remote chains such as BNB chain or any other EVM compatible chain
+
+Hyperlane CLI​
+The Hyperlane CLI is the official command-line tool for deploying Hyperlane contracts to new chains. It also includes utilities for interacting with deployed contracts and registries.
+Both Rootstock testnet and mainnet are integrated in the CLI via the Hyperlane registry.
+To get started, install the hyperlane cli using npm.
+Installation​
+There are two options for installing the Hyperlane CLI:
+
+
+Global installaton
+Use -g flag to globally install Hyperlane cli and access anywhere in your terminal
+npm i @hyperlane-xyz/cli -g
+
+
+Install within a directory
+In the terminal, make a directory to install Hyperlane cli:
+mkdir hyperlane_clicd hyperlane_clinpm i @hyperlane-xyz/cli --save
+This will install Hyperlane cli within the hyperlane_cli directory inside node_modules. This is the most recommended way to use Hyperlane cli. Now test the installation by running following command inside hyperlane_cli directory:
+npx hyperlane --version
+
+
+noteIf you installed Hyperlane CLI within a directory using the second option, you'll need to use npx hyperlane instead of just hyperlane in your terminal. This ensures that npx can locate the CLI within your local node_modules directory. If you installed Hyperlane CLI globally, you can use hyperlane directly.
+Registry​
+Let’s create a custom chain config, run:
+// Use `npx hyperlane` in case of local installationhyperlane registry init
+Output:
+# yaml-language-server: $schema=../schema.jsonname: rootstocktestnetdisplayName: rootstocktestnetchainId: 31domainId: 31protocol: ethereumrpcUrls:  - http: https://public-node.testnet.rsk.conativeToken:  symbol: ETH  name: Ether  decimals: 18transactionOverrides:  gasLimit: 6800000
+
+Under $HOME/.hyperlane/chains you will find a new folder named with your custom chain’s name, and a file named metadata.yaml within that folder.
+On Mac, use the following commands to view the folder.
+
+ls $HOME/.hyperlane/chainscd $HOME/.hyperlane/chains/rootstocktestnet
+Open the folder in your code editor to view the file: metadata.yml.
+TipAppend transactionOverrides gasLimit if it's not automatically added by cli by editing the metadata.yaml file at: $HOME/.hyperlane/chains
+Reference: https://docs.hyperlane.xyz/docs/deploy-hyperlane#1-registry
+Core init​
+Next, let’s configure, deploy and test your custom chain’s core contracts.
+Initialize configuration​
+To initialize, set the private key or seed phrase of your funded deployer address to HYP_KEY in a local environment variable. For example: export HYP_KEY=<YOUR_PRIVATE_KEY>.
+From the same terminal instance, run:
+// Use `npx hyperlane` in case of local installationhyperlane core init
+Output
+Hyperlane Core Configure------------------------Creating a new core deployment config...? Detected owner address as 0xd624E015A308d7917F07424bb4985a024af1188a from signer, is this correct? yesCreating trustedRelayerIsm...Created trustedRelayerIsm!Creating merkleTreeHook...Created merkleTreeHook!Creating protocolFee...Created protocolFee!Core config is valid, writing to file ./configs/core-config.yaml: owner: "0xd624E015A308d7917F07424bb4985a024af1188a"    defaultIsm:      type: trustedRelayerIsm      relayer: "0xd624E015A308d7917F07424bb4985a024af1188a"    defaultHook:      type: merkleTreeHook    requiredHook:      owner: "0xd624E015A308d7917F07424bb4985a024af1188a"      type: protocolFee      beneficiary: "0xd624E015A308d7917F07424bb4985a024af1188a"      maxProtocolFee: "100000000000000000"      protocolFee: "0"    ✅ Successfully created new core deployment config.
+Reference: https://docs.hyperlane.xyz/docs/deploy-hyperlane#2-core
+Deploy contracts​
+To deploy contracts, run:
+// Use `npx hyperlane` in case of local installationhyperlane core deploy
+Output:
+hyperlane core deployHyperlane CLI{"level":30,"time":1726741403674,"pid":51011,"msg":"Your CLI version: 5.1.2, latest version: 5.2.0"}? Please enter private key or use the HYP_KEY environment variable.Hyperlane Core deployment------------------------------------------------? Select network type Testnet? Select chain to connect: rootstocktestnet? Do you want to use an API key to verify on this (rootstocktestnet) chain's block explorer noDeployment plan===============Transaction signer and owner of new contracts: 0xA0365b08A56c75701415610Bf49B30DbfA285ac4Deploying core contracts to network: rootstocktestnet┌────────────────────────┬──────────────────────────────────────┐│ (index)                │ Values                               │├────────────────────────┼──────────────────────────────────────┤│ Name                   │ 'rootstocktestnet'                   ││ Display Name           │ 'rootstocktestnet'                   ││ Chain ID               │ 31                                   ││ Domain ID              │ 31                                   ││ Protocol               │ 'ethereum'                           ││ JSON RPC URL           │ 'https://public-node.testnet.rsk.co' ││ Native Token: Symbol   │ 'ETH'                                ││ Native Token: Name     │ 'Ether'                              ││ Native Token: Decimals │ 18                                   │└────────────────────────┴──────────────────────────────────────┘Note: There are several contracts required for each chain, but contracts in your provided registries will be skipped.? Mailbox already exists at 0xCfA3E807DEF506Db480328cB975fC9108eb59e52. Are you sure you want to deploy a new mailbox and overwrite existing registry artifacts? yes? Is this deployment plan correct? yesRunning pre-flight checks for chains...✅ Chains are valid✅ Signer is valid✅ Balances are sufficient🚀 All systems ready, captain! Beginning deployment...Deploying to rootstocktestnet from https://explorer.rootstock.io/address/0xA0365b08A56c75701415610Bf49B30DbfA285ac4Deploying staticMerkleRootMultisigIsmFactory on rootstocktestnet with constructor args ()...Pending https://explorer.rootstock.io/tx/0x53e9c7b043964bd6d28540a83a1f414b159af6a03fcbeccebbf54ba1648c58fc (waiting 1 blocks for confirmation)
+You should see the following response:
+Done updating chain rootstocktestnet at filesystem registry✅ Core contract deployments complete:    staticMerkleRootMultisigIsmFactory: "0xe43c9a892c0747020892ca204FfB04E0b25D0d09"    staticMessageIdMultisigIsmFactory: "0x384930CCe5a044074c30bb7108284ea92728308c"    staticAggregationIsmFactory: "0xa3725eAC59776F075dC5bb02D2997a7feb326595"    staticAggregationHookFactory: "0xb58F0aB24165a33ae0167C9B036de7C4b1626450"    domainRoutingIsmFactory: "0x2D687f5B6f868F510B9F3b7714A748Fe9492b848"    proxyAdmin: "0xB820707a39eeE38389601cb801146aCaDdE8905e"    mailbox: "0x7C7e9d0578A2CC3FCd086045265d667901eF7D2c"    interchainAccountRouter: "0xc84693adE9c3F2421da4522E585f1380FC1Ef1F4"    interchainAccountIsm: "0x102C9C8527797a2eD435A8d08EFF96e5D2D46638"    validatorAnnounce: "0x04756442951D09f61362AFd9A2Ff48653eaa2E06"    testRecipient: "0xc50EE7C40602f4c6425f25a139939bb8C5236290"
+Note that deployment can take a few minutes.
+Under $HOME/.hyperlane/chains you will find a new folder named with your custom chain’s name, and a file named addresses.yaml within that folder.
+Here is the Rootstock metadata and addresses.yml:
+
+Rootstock testnet metadata
+Rootstock mainnet metadata
+
+We have successfully deployed the Hyperlane contracts on Rootstock testnet. The next step is to run Hyperlane relayer and validator nodes so that the message could be sent from source chain to destination chain.
+Running a validator node​
+Validators provide the security for messages sent from your chain to remote chains. To get started:
+
+Clone the hyperlane monorepo
+Build and run the validator using the steps listed in the README.md.
+Use the reference script below to build and run the validator for Rootstock.
+Add rootstock contract addresses and metadata in ./config/testnet4_config.json file located in your filesystem inside the Rust project.
+Example config.json file
+
+To run a validator node, enter the following commands:
+cargo build --release --bin relayerCONFIG_FILES=./config/testnet4_config.json./target/release/validator --validator.key 0x... --db ./hyperlane_db --originChainName rootstock --reorgPeriod 2 --checkpointSyncer.type localStorage --checkpointSyncer.path ./checkpointSyncer
+View full validator configurations in Run a Validator
+Running a Relayer node​
+Relayers deliver interchain messages sent between the local and remote chains. Learn more about what relayers do.
+
+Build and run the relayer
+Use the reference script below to build and run the relayer for Rootstock.
+Add rootstock contract addresses and metadata in ./config/testnet4_config.json file located in your filesystem inside the Rust project.
+Example config.json file
+
+To run a relayer node, enter the following commands:
+CONFIG_FILES=./config/testnet4_config.json ./target/release/relayer --db ./hperlane_db --relayChains rootstock,bsctestnet --defaultSigner.key 0x... --allowLocalCheckpointSyncers true --checkpointSyncer.type localStorage --checkpointSyncer.path ./hyperlaneSyncer --gasPaymentEnforcement '[{"type": "none", "matchingList": []}, {"type": "minimum", "payment": 0}]'
+View the full relayer configurations
+Sending a message​
+You can verify that everything is working correctly by sending a test message between pairs of chains. To verify, initiate the message with the CLI.
+npx hyperlane send message --origin rootstock --destination bsctestnet --key 0x...
+See more details here about sending a message.
+Wrap route setup​
+Until now we have a Hyperlane mailbox and core contracts deployed on Rootstock, it’s time to set up token bridging between Rootstock chain and other Hyperlane chains.
+See the full guide for how to do a wrap route setup.
+Useful Resources​
+
+How Hyperlane Works
+Hyperlane Explorer
+Deployed Addresses
+Hyperlane Github Repos
+Hyperlane Cli
+Hyperlane Registries
+Hyperlane Validators
+Hyperlane Relayers
+Hyperlane Demo Template
+Tags:hyperlanerootstocktutorialsrskblockchaininteroperabilitycross chain bridgedefiPrevious4.5Add a Protocol To DefiLlamaNext5.0Port to RootstockLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHyperlane CLIInstallationRegistryCore initDeploy contractsRunning a validator nodeRunning a Relayer nodeSending a messageWrap route setupUseful ResourcesMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

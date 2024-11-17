@@ -1,0 +1,45 @@
+
+
+
+
+
+Performing a peg-out using Metamask and hardware wallet | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outViewing a derived bitcoin addressPeg-out using Metamask and any hardware walletPeg-out using LedgerPegout using MetamaskTroubleshooting and Common ErrorsViewing Peg-out Transaction StatusPeg-out using TrezorAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.4Peg-outPeg-out using Metamask and any hardware walletTime to read: 1 minOn this pagePerforming a peg-out using Metamask and hardware wallet
+Performing a peg-out transaction using Ledger and Liquality​
+The Liquality Wallet is a browser extension for accessing Bitcoin, Rootstock, and Ethereum applications.
+WarningLiquality Wallet has been discountinued. See section on Supported wallets by the PowPeg.
+We will perform a peg-out transaction using the Ledger Hardware Wallet and Liquality.
+
+See How to perform a peg-in transaction using Ledger
+
+Get started​
+To perform a peg-out transaction using the Ledger device with Metamask, follow the steps below:
+Step 1: Open Metamask click on select account, and then in the Add account or hardware wallet button:
+
+Step 2: Select Add hardware wallet option:
+
+Step 3: The user will be redirected to wallet selection page:
+
+To connect with a Trezor Wallet:
+
+To connect with a Ledger Wallet:
+
+Now you can see "Ledger" or "Trezpr" label in your Metamask accounts
+
+
+Next​
+
+See Performing a peg-out transaction using Trezor
+See Performing a peg-out transaction using Ledger
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.4.1Viewing a derived bitcoin addressNext6.1.4.3Peg-out using LedgerLast updated on Nov 7, 2024 by Owanate AmachreeOn this pagePerforming a peg-out transaction using Ledger and LiqualityGet startedNextMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

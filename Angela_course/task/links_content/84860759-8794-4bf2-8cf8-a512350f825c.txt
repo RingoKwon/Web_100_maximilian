@@ -1,0 +1,18 @@
+
+
+
+
+
+Maintenance | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupMerged MiningJSON RPCPublic NodesMaintenanceNetwork UpgradesUpdating the NodeTroubleshootingMaintenanceMaintenanceNetwork UpgradesHow to introduce consensus rules changes using network upgrades on an RSK node. What to consider. Adding a new rule. Running tests with new rules.Updating the NodeHow to introduce consensus rules changes using network upgrades on an RSK node. What to consider. Adding a new rule. Running tests with new rules.Previous5.0Public NodesNext6.1Network UpgradesMoreReport an IssueJoin the CommunityChangelogFeedbackShareCopy page linkCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

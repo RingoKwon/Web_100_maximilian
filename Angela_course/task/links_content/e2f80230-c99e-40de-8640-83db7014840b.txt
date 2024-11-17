@@ -1,0 +1,90 @@
+
+
+
+
+
+Frequently Asked Questions (FAQs) | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg AppFAQsTime to read: 1 minOn this pageFrequently Asked Questions (FAQs)Here, you can find a list of frequently asked questions (FAQs) about the PowPeg App.
+1. What are the requirements to use PowPeg App?
+To know more about the requirements, see prerequisites
+2. What are the common errors in peg-out transactions?
+To know more about the common errors, see common errors.
+3. How do I derive a BTC private key after sending RBTC through the PowPeg App?
+See section on deriving electrum for how to export a private key.
+4. What is the difference between SegWit and Legacy addresses?
+Legacy address is the original BTC address while SegWit is the newer address format with lower fees. SegWit means Segregated Witness, where Segregated is to separate and Witness is the transaction signatures involved with a specific transaction.
+5. What type of addresses do I need to perform a peg in?
+
+For information on the type of addresses to use when performing a peg-in transaction
+See the supported addresses page.
+
+6. Why use the PowPeg instead of the protocol directly? 
+
+The PowPeg app has a lot of benefits including enabling easier and simplified peg-in transactions.
+See why use the PowPeg? for a list of benefits when you use the application.
+
+7. What are the supported browsers to use PowPeg App?
+
+To know more about the supported browsers
+See the supported browsers.
+
+8. What are the supported wallets to use PowPeg App?
+
+To know more about the requirements;
+See supported wallets.
+
+9. How long does it take for a native pegin transaction to complete?
+
+native pegin needs 17 hours to be completed
+
+
+10. How long does it take for a pegin transaction to complete using the PowPeg (FAST MODE) option?
+
+Using fast mode, pegin time has been significantly reduced to ~20 mins.
+Note: In Fast Mode, we utilize Liquidity Providers (LPs) to expedite the transfer of funds to end users. These third-party providers can set their own transfer times. This information is displayed on the screen, allowing users to select the LP that offers the most suitable transfer speed for their needs.
+
+11. How long does it take for a native pegout transaction to complete?
+
+native pegout needs 34 hours to be completed
+
+12. How long does it take for a pegout transaction to complete using the PowPeg (FAST MODE) option?
+
+Using fast mode, pegout time has been significantly reduced to ~20 mins.
+Note: In Fast Mode, we utilize Liquidity Providers (LPs) to expedite the transfer of funds to end users. These third-party providers can set their own transfer times. This information is displayed on the screen, allowing users to select the LP that offers the most suitable transfer speed for their needs.
+
+13. What are the min and max for pegin transaction?
+
+The minimum values allowed when creating a peg-in transaction is 0.005 BTC.
+The maximum values allowed when creating a peg-in transaction is 10 BTC.
+
+14. What are the min and max for pegout transaction?
+
+The minimum values allowed when creating a peg-out transaction is 0.004 RBTC.
+The maximum values allowed when creating a peg-out transaction is 10 RBTC.
+
+15.After making a native pegout, to which address will I receive my BTCs?
+
+During the pegout process, the destination address of your BTC is derived from your signature, this enables one to know which address will receive the BTCs.
+See the Derivation details page
+
+16.When using Trezor i'm receiving the error Forbidden key path ?
+
+The latest versions of Trezor Suite have implemented a security rule to disable its use with non-standard key paths. Therefore, the user must explicitly set Perform Safety Checks to PROMPT option in Trezor Suite in order to use the Trezor wallet in the PowPeg application.
+If is not enabled you will receive this error 
+This video explains how to enable Perform Safety Checks to PROMPT on Trezor Suite Enabling Prompt for Key Path
+
+
+
+Next​
+See Glossary section for explanation of terms.Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.5.4Supported WalletsNext6.1.7GlossaryLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageNextMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

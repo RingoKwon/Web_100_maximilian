@@ -1,0 +1,29 @@
+
+
+
+
+
+Design and Architecture | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewCourses on RootstockContributeTutorialsPort to RootstockGuidesPowPeg AppOverviewPrerequisitesPeg-inPeg-outAdvanced OperationsDesign and ArchitectureSupported AddressesSupported BrowsersSupported WalletsFAQsGlossaryRunesToken BridgeHackathonsFAQs6.0Guides6.1PowPeg App6.1.5Advanced OperationsDesign and ArchitectureTime to read: 1 minOn this pageDesign and ArchitectureThe PowPeg App is converts BTC to RBTC and vice versa. It is secured by the powpeg protocol, which is a unique 2-way peg system that secures the locked bitcoins with the same Bitcoin hashrate that establishes consensus. See the history of the PowPeg Protocol.
+In this section, we will cover the design and architecture used in building the PowPeg App. It comprises of a web interface built with Vue.js, a backend application built with Node.js, and made to run via containers.
+High level​
+The solution is a web interface, which integrates with a REST API, which in turn communicates with internal services such as the blockchain node and databases. In addition, a daemon/worker will be created that will be responsible for obtaining data from the blockchain and changing the status of the transaction.
+This diagram shows the architecture of the PowPeg App, a Customer (Person) refers to someone who owns BTC or RBTC who wishes to use the PowPeg App to send a transaction.
+
+Components​
+The PowPeg App frontend is developed using Vue.js. The backend application is developed using Nodejs containing a restful API Service and a Daemon service. The API is responsible to serve the data to the front-end, and the Daemon service is responsible for listening for transactions on-chain and updates the database.
+
+Containers​
+All applications are available to run using Docker and are built using a Dockerfile. The front-end application will start a node environment with nginx to serve the Vuejs application, and the back-end will start nodejs and start the daemon and api listening by default on port 3000.
+Tags:powpeg apppeg-inpeg-outbridgerskrootstockPrevious6.1.5Advanced OperationsNext6.1.5.2Supported AddressesLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageHigh levelComponentsContainersMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

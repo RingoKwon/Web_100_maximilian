@@ -1,0 +1,27 @@
+
+
+
+
+
+Minimum Hardware Requirements to Run a Rootstock Node | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node SetupHardware RequirementsTime to read: 1 minMinimum Hardware Requirements to Run a Rootstock NodeThese are the minimum requirements that must be met to run an Rootstock node (Mainnet and Testnet):
+
+2 cores
+8 GB RAM
+128 GB storage
+OS x64
+
+
+RSKj allows you to run a Rootstock node, crucial for local development and testing. It supports connections to Regtest (local), Testnet (testing), and Mainnet (production). Visit the official RSKj GitHub repository to download the latest stable release.
+Tags:hardwarespecsrequirementsPrevious2.0Node SetupNext2.2Node InstallationLast updated on Nov 7, 2024 by Owanate AmachreeMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

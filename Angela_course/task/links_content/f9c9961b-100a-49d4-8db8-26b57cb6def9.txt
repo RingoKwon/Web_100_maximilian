@@ -1,0 +1,39 @@
+
+
+
+
+
+Switch network | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationConfigure the nodeSetting Config PreferencesCLIReferenceSwitch networkConfigure VerbosityPeer Scoring SystemTransaction Rate LimiterNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node Setup2.3Configure the nodeSwitch networkTime to read: 1 minOn this pageSwitch networkIf you want to switch your node to Mainnet, Testnet, or RegTest networks:
+1. If your node is not in localhost, connect your computer to the node over ssh.
+ssh user@server
+2. Pick a network that you would like to connect to.
+Regtest​
+In order to switch from another network to Regtest:
+sudo service rsk stopcd /etc/rsksudo rm -f node.confsudo ln -s regtest.conf node.confsudo service rsk start
+Using this network, it allows you to start with some wallets (accounts) on your node. These wallets have funds.
+Testnet​
+In order to switch from another network to Testnet:
+sudo service rsk stopcd /etc/rsksudo rm -f node.confsudo ln -s testnet.conf node.confsudo service rsk start
+For Mainnet​
+In order to switch from another network to Mainnet:
+sudo service rsk stopcd /etc/rsksudo rm -f node.confsudo ln -s mainnet.conf node.confsudo service rsk start
+By running these instructions in your shell, you are:
+
+Stopping the running RSK service.
+Moving to RSK configuration folder (cd).
+Removing node.conf, that is a symbolic link to the configuration you're using (rm deletes it).
+Linking node.conf with the configuration file you decide (ls with the -s option, it makes symbolic - or soft - links). The node is configured to read directly from the node.conf link.
+Restarting the RSK service.
+Tags:rskrskjnodeconfignetworkmainnettestnetregtestPrevious2.3.3ReferenceNext2.3.5Configure VerbosityLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+

@@ -1,0 +1,42 @@
+
+
+
+
+
+Verify security chain of RSKj source code | Rootstock Developers Portal
+
+
+
+
+
+
+
+
+
+
+Skip to main contentDocsSearchCTRL + IHome Concepts Developers Node Operators Resources Dev ToolsOverviewNode SetupHardware RequirementsNode InstallationConfigure the nodeNode RunnersReproducible BuildSecurity ChainMerged MiningJSON RPCPublic NodesMaintenanceTroubleshooting2.0Node SetupSecurity ChainTime to read: 1 minOn this pageVerify security chain of RSKj source codeVerify authenticity of RSKj source code and its binary dependencies​
+The authenticity of the source code must be verified by checking the signature of the release tags in the official Git repository. See Reproducible builds. The authenticity of the binary dependencies is verified by Gradle after following the steps below to install the necessary plugins.
+Download Rootstock Release Signing Key public key​
+For Linux based OS (Ubuntu for example), it's recommended to install curl and gnupg-curl in order to download the key through HTTPS.
+We recommend using GPG v1 to download the public key because GPG v2 encounters problems when connecting to HTTPS key servers. You can also download the key using curl, wget or a web browser but always check the fingerprint before importing it.
+gpg --keyserver https://secchannel.rsk.co/SUPPORT.asc --recv-keys A6DBEAC640C5A14B
+You should see the output below:
+Output:gpg: key A6DBEAC640C5A14B: "IOV Labs Support <support@iovlabs.org>" importedgpg: Total number processed: 1gpg: imported: 1  (RSA: 1)
+Verify the fingerprint of the public key​
+gpg --finger A6DBEAC640C5A14B
+The output should look like this:
+Output:pub   rsa4096 2022-05-11 [C]1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14Buid   [ unknown] IOV Labs Support <support@iovlabs.org>sub   rsa4096 2022-05-11 [S]sub   rsa4096 2022-05-11 [E]
+Verify the signature of SHA256SUMS.asc​
+The fileSHA256SUMS.asc is signed with Rootstock public key and includes SHA256 hashes of the files necessary to start the build process.
+Note: Ensure to cd into the rskj directory before executing the commands below.
+gpg --verify SHA256SUMS.asc 
+The output should look like this:
+Output:gpg: Signature made Wed May 11 10:50:48 2022 -03gpg: using RSA key 1F1AA750373B90D9792DC3217997999EEA3A9079gpg: Good signature from "IOV Labs Support <support@iovlabs.org>" [unknown]gpg: WARNING: This key is not certified with a trusted signature!gpg: There is no indication that the signature belongs to the owner.Primary key fingerprint: 1DC9 1579 9132 3D23 FD37  BAA7 A6DB EAC6 40C5 A14BSubkey fingerprint: 1F1A A750 373B 90D9 792D  C321 7997 999E EA3A 9079
+Note: Learn more about key management here.
+Verification of binary dependencies​
+The authenticity of the script configure.sh is checked using the sha256sum command and the signed SHA256SUM.asc file. The script is used to download and check the authenticity of the Gradle Wrapper and Gradle Witness plugins. After these plugins are installed, the authenticity of the rest of the binary dependencies is checked by Gradle.
+Linux - Windows (bash console)
+LinuxMac OSXsha256sum --check SHA256SUMS.ascshasum --check SHA256SUMS.asc
+Run configure script to configure secure environment​
+Linux, Mac OSX./configure.shTags:rskrskjnodesecuritynode operatorsreproducible buildsverificationPrevious2.5Reproducible BuildNext3.0Merged MiningLast updated on Nov 7, 2024 by Owanate AmachreeOn this pageVerify authenticity of RSKj source code and its binary dependenciesDownload Rootstock Release Signing Key public keyVerify the fingerprint of the public keyVerify the signature of SHA256SUMS.ascVerification of binary dependenciesRun configure script to configure secure environmentMoreEdit this pageReport an IssueJoin the CommunityChangelogFeedbackCopy page linkBack to topBuildTogetherWHITEPAPEROriginal WhitepaperUpdated WhitepaperRIF WhitepaperRESOURCESMerged MiningRootstock ExplorerAbout RootstockLabsBlog© 2024. RootstockLabs. All rights reserved
+
