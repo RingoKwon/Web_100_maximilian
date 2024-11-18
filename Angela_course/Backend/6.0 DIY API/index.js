@@ -62,16 +62,18 @@ app.put("/jokes/:id", (req, res) => {
 app.patch("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const existingJoke = jokes.find((joke) => joke.id === id);
-  
+
   // Check if the joke exists
   if (!existingJoke) {
     return res.status(404).json({ message: "Joke not found" });
   }
 
   const newJoke = {
-    id: id, 
-    jokeText: req.body.text !== undefined ? req.body.text : existingJoke.jokeText,
-    jokeType: req.body.type !== undefined ? req.body.type : existingJoke.jokeType
+    id: id,
+    jokeText:
+      req.body.text !== undefined ? req.body.text : existingJoke.jokeText,
+    jokeType:
+      req.body.type !== undefined ? req.body.type : existingJoke.jokeType,
   };
 
   console.log(newJoke);
@@ -80,7 +82,11 @@ app.patch("/jokes/:id", (req, res) => {
 });
 
 //7. DELETE Specific joke
-
+app.delete("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  jokes = jokes.filter(joke=> joke.id !== id )
+  res.json({message: `${id} deleted`})
+});
 //8. DELETE All jokes
 
 app.listen(port, () => {
