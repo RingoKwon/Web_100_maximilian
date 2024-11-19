@@ -93,6 +93,14 @@ app.delete("/jokes/:id", (req, res) => {
   }
 });
 //8. DELETE All jokes
+app.delete("/all", (req, res) => { 
+  const apiKey = req.query.key;
+  if (apiKey === masterKey) {
+    jokes = []; 
+    return res.sendStatus(200);
+  }
+  res.status(404).json({ error: `API key wrong` });
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
