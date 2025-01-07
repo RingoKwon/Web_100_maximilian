@@ -42,7 +42,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //CHALLENGE 1: GET All posts
 
-
 //CHALLENGE 2: GET a specific post by id
 
 //CHALLENGE 3: POST a new post
