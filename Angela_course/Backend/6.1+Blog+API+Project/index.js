@@ -38,6 +38,7 @@ let lastId = 3;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 //Write your code here//
 
 //CHALLENGE 1: GET All posts
