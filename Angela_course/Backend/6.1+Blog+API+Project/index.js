@@ -56,6 +56,24 @@ app.get("/posts/:id", (req, res) => {
 });
 
 //CHALLENGE 3: POST a new post
+app.post("/posts", (req, res) => {
+  const newId = (lastId = +1);
+  
+  const title = req.body.title;
+  const content = req.body.content;
+  const author = req.body.author;
+  const postPush = (id, title, content, author) => {
+    posts.push({
+      id: id,
+      title: title,
+      content: content,
+      author: author,
+    });
+    postPush(id, content, title, author);
+  };
+  res.status(201).json({ message: "Joke created successfully", id: newId });
+  // console.log(posts[newId]);
+});
 
 //CHALLENGE 4: PATCH a post when you just want to update one parameter
 
