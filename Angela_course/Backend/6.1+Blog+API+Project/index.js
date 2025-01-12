@@ -35,13 +35,16 @@ let posts = [
 let lastId = 3;
 
 // Middleware
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(bodyParser.json());
 
 //Write your code here//
 
 //CHALLENGE 1: GET All posts
+app.get("/posts", (req, res) => {
+  console.log(posts);
+  res.json(posts);
+});
 
 //CHALLENGE 2: GET a specific post by id
 

@@ -6,7 +6,8 @@ const app = express();
 const port = 3000;
 const API_URL = "http://localhost:4000";
 
-app.use(express.static("public"));
+app.use(express.static("public")); // 사용자가 웹사이트에서 http://localhost:3000/style.css를 요청하면, 
+// 서버는 public/style.css 파일을 찾아서 클라이언트에게 전달합니다.
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

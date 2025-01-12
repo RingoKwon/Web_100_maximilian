@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
     console.log(error.response.data);
     res.status(500);
   }
-});
+  });
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
