@@ -78,6 +78,22 @@ app.post("/posts", (req, res) => {
 });
 
 //CHALLENGE 4: PATCH a post when you just want to update one parameter
+app.patch("/posts/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const existingPost = posts.find((post) => post.id === id);
+
+  if(!existingPost) {
+    return res.status(404).json({message: "post not found"})
+  }
+  
+  // Update the existing post in the posts array
+  existingPost.title = req.body.title !== undefined ? req.body.title : existingPost.title;
+  existingPost.content = req.body.content !== undefined ? req.body.content : existingPost.content;
+  existingPost.author = req.body.author !== undefined ? req.body.author : existingPost.author;
+  existingPost.date = new Date(); // Update the date to the current date
+
+  res.json({message: "post updated", post: existingPost});
+});
 
 //CHALLENGE 5: DELETE a specific post by providing the post id.
 
