@@ -49,10 +49,9 @@ app.get("/posts", (req, res) => {
 //CHALLENGE 2: GET a specific post by id
 app.get("/posts/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const findByFilter = (posts, id) => {
-    return posts.find((post) => post.id === id);
-  };
-  res.json(findByFilter(posts, id));
+  const findByFilter = posts.find((post) => post.id === id);
+  if (!findByFilter) return res.status(404).json({ message: "Post not found" });
+  res.json(findByFilter)
 });
 
 //CHALLENGE 3: POST a new post
