@@ -57,8 +57,8 @@ app.get("/posts/:id", (req, res) => {
 
 //CHALLENGE 3: POST a new post
 app.post("/posts", (req, res) => {
-  const newId = (lastId = +1);
-  
+  const newId = lastId + 1;
+
   const title = req.body.title;
   const content = req.body.content;
   const author = req.body.author;
@@ -68,10 +68,12 @@ app.post("/posts", (req, res) => {
       title: title,
       content: content,
       author: author,
+      date: new Date(),
     });
-    postPush(id, content, title, author);
   };
-  res.status(201).json({ message: "Joke created successfully", id: newId });
+  postPush(newId, content, title, author);
+  lastId = newId;
+  res.status(201).json({ message: "Joke created successfully", id: posts });
   // console.log(posts[newId]);
 });
 
