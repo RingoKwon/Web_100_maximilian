@@ -30,6 +30,7 @@ app.get("/", async (req, res) => {
     countries: countries,
     total: total
   })
+  db.end();
 });
 
 app.listen(port, () => {
