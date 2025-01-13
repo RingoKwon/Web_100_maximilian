@@ -1,8 +1,31 @@
 import express from "express";
 import bodyParser from "body-parser";
+import pg from "pg";
 
 const app = express();
 const port = 3000;
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: "0000",
+  post: 5432,
+});
+
+db.connect();
+
+let quiz = [];
+
+db.query(
+  "select flags, capital from public.flags a join public.capitals b on a.id = b.id",
+  (err, res) => {
+    if (err) {
+      console.error("Error Executing Query", err.stack);
+    } else {
+      quiz = res.rows;
+    }
+  }
+);
 
 let totalCorrect = 0;
 
