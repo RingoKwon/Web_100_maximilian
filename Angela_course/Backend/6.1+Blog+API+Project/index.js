@@ -76,19 +76,12 @@ app.patch("/posts/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const existingPost = posts.find((post) => post.id === id);
 
-  if (!existingPost) {
-    return res.status(404).json({ message: "post not found" });
-  }
+  if (!existingPost) return res.status(404).json({ message: "post not found" });
 
+  if (req.body.title) existingPost.title = req.body.title;
+  if (req.body.content) existingPost.content = req.body.content;
+  if (req.body.author) existingPost.author = req.body.author;
   // Update the existing post in the posts array
-  existingPost.title =
-    req.body.title !== undefined ? req.body.title : existingPost.title;
-  existingPost.content =
-    req.body.content !== undefined ? req.body.content : existingPost.content;
-  existingPost.author =
-    req.body.author !== undefined ? req.body.author : existingPost.author;
-  existingPost.date = new Date(); // Update the date to the current date
-
   res.json({ message: "post updated", post: existingPost });
 });
 
