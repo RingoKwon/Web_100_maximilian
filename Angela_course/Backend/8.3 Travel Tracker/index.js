@@ -42,7 +42,7 @@ app.post("/add", async (req, res) => {
   let countryCode;
   try {
     const result = await db.query(
-      `select country_code from public.countries where country_name = '${countryName}'`
+      `select country_code from public.countries where lower(country_name) like '%${countryName.toLowerCase()}%'`
     );
     countryCode = result.rows[0].country_code;
   } catch (e) {
