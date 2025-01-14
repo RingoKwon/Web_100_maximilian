@@ -17,16 +17,16 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-let currentUserId = 2;
+let currentUserId = 1;
 
 const result = await db.query("select * from users");
 
 let users = result.rows;
 
-async function checkVisisted() {
+async function checkVisisted(user_id) {
   const result = await db.query(
     "SELECT country_code FROM visited_countries where user_id = $1",
-    [currentUserId]
+    [user_id]
   );
   let countries = [];
   result.rows.forEach((country) => {
@@ -35,7 +35,7 @@ async function checkVisisted() {
   return countries;
 }
 app.get("/", async (req, res) => {
-  const countries = await checkVisisted();
+  const countries = await checkVisisted(currentUserId);
   res.render("index.ejs", {
     countries: countries,
     total: countries.length,
