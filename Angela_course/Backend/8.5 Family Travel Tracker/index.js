@@ -45,6 +45,7 @@ app.get("/", async (req, res) => {
 });
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
+  console.log(currentUserId)
 
   try {
     const result = await db.query(
@@ -80,6 +81,8 @@ app.post("/user", async (req, res) => {
     users: users,
     color: color,
   });
+  currentUserId = user_id
+
 });
 
 app.post("/new", async (req, res) => {
