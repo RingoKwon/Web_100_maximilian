@@ -17,14 +17,17 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-let currentUserId = 1;
+let currentUserId = 2;
 
-const result  = await db.query("select * from users"); 
+const result = await db.query("select * from users");
 
-let users = result.rows
+let users = result.rows;
 
 async function checkVisisted() {
-  const result = await db.query("SELECT country_code FROM visited_countries");
+  const result = await db.query(
+    "SELECT country_code FROM visited_countries where user_id = $1",
+    [currentUserId]
+  );
   let countries = [];
   result.rows.forEach((country) => {
     countries.push(country.country_code);
