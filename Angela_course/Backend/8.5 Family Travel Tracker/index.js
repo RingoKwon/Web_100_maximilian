@@ -67,7 +67,20 @@ app.post("/add", async (req, res) => {
     console.log(err);
   }
 });
-app.post("/user", async (req, res) => {});
+app.post("/user", async (req, res) => {
+
+  const user_id = req.body.user
+  const countries = await checkVisisted(user_id);
+  const result = await db.query ("select color from users where id = $1", [user_id])
+  const color = result.rows[0].color
+  console.log(user_id, countries, color)
+  res.render("index.ejs", {
+    countries: countries,
+    total: countries.length,
+    users: users,
+    color: color,
+  });
+});
 
 app.post("/new", async (req, res) => {
   //Hint: The RETURNING keyword can return the data that was inserted.
