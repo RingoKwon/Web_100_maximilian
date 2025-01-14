@@ -67,9 +67,9 @@ app.post("/add", async (req, res) => {
     console.log("Insert successful");
   } catch (err) {
     console.error("Error executing query", err);
-    start1();
+    const { countries, total } = await start1();
     res.render("index.ejs", {
-      error: "no country",
+      error: "already exist",
       countries: countries,
       total: total,
     });
