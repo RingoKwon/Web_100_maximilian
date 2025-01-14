@@ -19,10 +19,9 @@ app.use(express.static("public"));
 
 let currentUserId = 1;
 
-let users = [
-  { id: 1, name: "Angela", color: "teal" },
-  { id: 2, name: "Jack", color: "powderblue" },
-];
+const result  = await db.query("select * from users"); 
+
+let users = result.rows
 
 async function checkVisisted() {
   const result = await db.query("SELECT country_code FROM visited_countries");
