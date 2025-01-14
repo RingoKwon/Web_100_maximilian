@@ -32,20 +32,22 @@ async function checkVisisted(user_id) {
   result.rows.forEach((country) => {
     countries.push(country.country_code);
   });
-  return countries;
+  const colorResult = await db.query ("select color from users where id = $1", [user_id])
+  const color = colorResult.rows[0].color
+  console.log(countries, color, user_id)
+  return {countries, color};
 }
 app.get("/", async (req, res) => {
-  const countries = await checkVisisted(currentUserId);
+  const {countries, color} = await checkVisisted(currentUserId);
   res.render("index.ejs", {
     countries: countries,
     total: countries.length,
     users: users,
-    color: "teal",
+    color: color,
   });
 });
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
-  console.log(currentUserId)
 
   try {
     const result = await db.query(
@@ -71,10 +73,8 @@ app.post("/add", async (req, res) => {
 app.post("/user", async (req, res) => {
 
   const user_id = req.body.user
-  const countries = await checkVisisted(user_id);
-  const result = await db.query ("select color from users where id = $1", [user_id])
-  const color = result.rows[0].color
-  console.log(user_id, countries, color)
+  const {countries, color} = await checkVisisted(user_id);
+
   res.render("index.ejs", {
     countries: countries,
     total: countries.length,
